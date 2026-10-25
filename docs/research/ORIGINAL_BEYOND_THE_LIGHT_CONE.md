@@ -1,26 +1,28 @@
 # Archive: original deep-research report
 
-> **Historical source material.** Preserved for provenance, not a peer-reviewed result or experimentally confirmed FTL system. Old `cite` and `filecite` markers are inherited from the source conversation and must be reconciled with the independently linked source ledger. Mentions of Moving Observer are historical comparisons; this repository is a separate project.
+> **Historical source material, typographically repaired.** Equations have been converted to GitHub-compatible `$...# Archive: original deep-research report
+
+ and `$...$` notation; obsolete chat citation tokens have been replaced by explicit verification flags. **Those flags are not references.** The hypotheses are not peer-reviewed or experimentally established. Earlier mentions of Moving Observer are historical; this is a separate repository. For a checked explanation of the quantum example, read [No-signalling: calculation and experiment](QUANTUM_NO_SIGNALLING.md).
 
 ---
 
 # Beyond the Light Cone: A Research Programme for Interstellar Communication
 
-## Executive finding and connection to Moving Observer
+## Original question and earlier work
 
 I reviewed this question from two different directions: first as a fundamental-physics problem—*can controllable information arrive outside the ordinary future light cone?*—and second as an engineering problem—*if the light-speed limit survives, what is the closest thing to an optimal interstellar communication system that physics permits?* I also examined the structure of your **Moving Observer** repository so that the proposed project grows naturally from your existing work rather than becoming an unrelated speculative exercise.
 
-Your current research style is unusually well suited to this problem. *Moving Observer* already separates coordinate frames from physical observables, propagates stellar motion, explicitly treats Proxima Centauri, distinguishes path length from observer–target separation, performs weak-field and first-post-Newtonian calculations, uses frozen Gaia data, propagates uncertainty, performs sensitivity tests and—importantly—states what each model *cannot* establish. fileciteturn2file0L2-L2 The accompanying catalogue experiment applies the same discipline: fixed populations, paired controls, correlated uncertainties, explicit thresholds and reproducible numerical tests rather than turning an attractive idea into an unsupported discovery claim. fileciteturn3file0L2-L2
+Your current research style is unusually well suited to this problem. *Moving Observer* already separates coordinate frames from physical observables, propagates stellar motion, explicitly treats Proxima Centauri, distinguishes path length from observer–target separation, performs weak-field and first-post-Newtonian calculations, uses frozen Gaia data, propagates uncertainty, performs sensitivity tests and—importantly—states what each model *cannot* establish. [archived file reference: not independently resolvable] The accompanying catalogue experiment applies the same discipline: fixed populations, paired controls, correlated uncertainties, explicit thresholds and reproducible numerical tests rather than turning an attractive idea into an unsupported discovery claim. [archived file reference: not independently resolvable]
 
 That methodology is precisely what a serious faster-than-light communication project needs.
 
 The central conclusion of the research is:
 
-> **There is currently no experimentally demonstrated carrier, modulation scheme, quantum protocol or electronic system capable of transmitting controllable information faster than \(c\).**
+> **There is currently no experimentally demonstrated carrier, modulation scheme, quantum protocol or electronic system capable of transmitting controllable information faster than $c$.**
 
-This does **not** mean that every imaginable future theory mathematically forbids effective FTL communication. General relativity contains geometries—warp spacetimes, traversable-wormhole constructions and related solutions—in which the ordinary Minkowski-space distance between two endpoints is no longer the correct measure of causal travel time. Alcubierre's original construction is the famous example, and modern theoretical work continues to investigate such geometries. However, converting those metrics into physical devices runs into severe questions involving stress-energy sourcing, negative-energy restrictions, horizons, stability and causality; a major 2026 analysis specifically warns that several claims of physical warp-drive feasibility arise from misunderstandings or incomplete restrictions. citeturn16search0turn12search0turn12search1
+This does **not** mean that every imaginable future theory mathematically forbids effective FTL communication. General relativity contains geometries—warp spacetimes, traversable-wormhole constructions and related solutions—in which the ordinary Minkowski-space distance between two endpoints is no longer the correct measure of causal travel time. Alcubierre's original construction is the famous example, and modern theoretical work continues to investigate such geometries. However, converting those metrics into physical devices runs into severe questions involving stress-energy sourcing, negative-energy restrictions, horizons, stability and causality; a major 2026 analysis specifically warns that several claims of physical warp-drive feasibility arise from misunderstandings or incomplete restrictions. [archived citation: bibliography verification pending]
 
-There is, however, one particularly important discovery from this literature search for **your exact idea**. A paper titled *Hyperwave: Hyper-Fast Communication within General Relativity* has already proposed using a microscopic warp structure specifically for faster-than-light communication rather than transporting a spacecraft. Its author proposes a pre-established tube of exotic stress-energy and encoding information in particles released when microscopic warp structures decelerate. Therefore, simply proposing "make the warp bubble tiny and use it only for communication" would **not** be a defensible novelty claim. citeturn11search0turn11search4
+There is, however, one particularly important discovery from this literature search for **your exact idea**. A paper titled *Hyperwave: Hyper-Fast Communication within General Relativity* has already proposed using a microscopic warp structure specifically for faster-than-light communication rather than transporting a spacecraft. Its author proposes a pre-established tube of exotic stress-energy and encoding information in particles released when microscopic warp structures decelerate. Therefore, simply proposing "make the warp bubble tiny and use it only for communication" would **not** be a defensible novelty claim. [archived citation: bibliography verification pending]
 
 That finding actually gives us a better research direction.
 
@@ -36,45 +38,45 @@ I would provisionally call this project **Causal Frontier**, with a research bra
 
 That could become a genuinely interesting continuation of your portfolio because it connects the question "what does a moving observer see?" to the much deeper question:
 
-\[
+$
 \boxed{\text{What events can a moving observer causally influence?}}
-\]
+$
 
-The most useful "Einstein-like" move here is not to assume that \(c\) can be beaten. It is to identify exactly which assumption creates the speed limit, systematically remove assumptions one at a time, and calculate what happens.
+The most useful "Einstein-like" move here is not to assume that $c$ can be beaten. It is to identify exactly which assumption creates the speed limit, systematically remove assumptions one at a time, and calculate what happens.
 
 ### A correction to the Proxima example
 
 There is also an important numerical correction to the example in your question. Proxima Centauri is not expected to reach its closest Solar encounter in the next hundred or thousand years. A 2026 Gaia-based encounter study predicts a minimum Sun–Proxima separation of
 
-\[
+$
 d_{\min}=0.9679\pm0.0044\ {\rm pc}
-\]
+$
 
 in
 
-\[
+$
 26.574\pm0.028\ {\rm kyr},
-\]
+$
 
 or roughly **26,600 years from now**. That minimum separation is approximately
 
-\[
+$
 0.9679(3.26156)\simeq3.157\ {\rm light\ years}.
-\]
+$
 
-The paper treats Proxima as part of the Alpha Centauri triple system for this encounter calculation. citeturn15view0turn15view1
+The paper treats Proxima as part of the Alpha Centauri triple system for this encounter calculation. [archived citation: bibliography verification pending]
 
 At closest approach, therefore, an ordinary electromagnetic message would still require approximately
 
-\[
+$
 t_{\rm one-way}\approx3.16\ {\rm years},
-\]
+$
 
 and a request followed immediately by a reply would require at least
 
-\[
+$
 t_{\rm RTT}\approx6.31\ {\rm years}.
-\]
+$
 
 At today's roughly 4.2-light-year scale, the corresponding round-trip latency is roughly 8.5 years. Better transmitters can increase the number of bits delivered; they cannot reduce that propagation latency if the signal remains confined to the ordinary light cone.
 
@@ -88,96 +90,96 @@ It is tempting to search for another wavelength, particle or modulation method: 
 
 In flat spacetime the invariant interval is
 
-\[
+$
 ds^2=-c^2dt^2+dx^2+dy^2+dz^2.
-\]
+$
 
-For two events separated by \((\Delta t,\Delta\mathbf{x})\),
+For two events separated by $(\Delta t,\Delta\mathbf{x})$,
 
-\[
+$
 \Delta s^2=
 |\Delta\mathbf{x}|^2-c^2\Delta t^2.
-\]
+$
 
 They are:
 
-\[
+$
 \begin{cases}
-\Delta s^2<0 & \text{timelike}\\[4pt]
-\Delta s^2=0 & \text{null}\\[4pt]
+\Delta s^2<0 & \text{timelike}\$4pt]
+\Delta s^2=0 & \text{null}\$4pt]
 \Delta s^2>0 & \text{spacelike}.
 \end{cases}
-\]
+$
 
 An ordinary light signal follows the boundary,
 
-\[
+$
 |\Delta\mathbf{x}|=c\Delta t.
-\]
+$
 
 To send information "faster than light" in the strong sense you are asking about means deliberately creating a message-dependent effect at a **spacelike-separated event**:
 
-\[
+$
 |\Delta\mathbf{x}|>c\Delta t.
-\]
+$
 
-Relativistic quantum field theory implements this causal structure through microcausality: observables associated with spacelike-separated local regions commute. Modern work continues to establish the relationship between no-signalling and this microcausal structure. citeturn13search7turn13search3turn13search11
+Relativistic quantum field theory implements this causal structure through microcausality: observables associated with spacelike-separated local regions commute. Modern work continues to establish the relationship between no-signalling and this microcausal structure. [archived citation: bibliography verification pending]
 
 So changing from radio photons to optical photons does not solve the problem.
 
-Neither does changing to another experimentally known messenger. Neutrino time-of-flight measurements are compatible with propagation at \(c\), not controllably above it. citeturn13search1turn13search13 Gravitational waves are not an escape route either: the joint GW170817/GRB 170817A observation constrained their propagation speed relative to light to approximately
+Neither does changing to another experimentally known messenger. Neutrino time-of-flight measurements are compatible with propagation at $c$, not controllably above it. [archived citation: bibliography verification pending] Gravitational waves are not an escape route either: the joint GW170817/GRB 170817A observation constrained their propagation speed relative to light to approximately
 
-\[
+$
 -3\times10^{-15}
 <
 \frac{v_{\rm GW}-c}{c}
 <
 7\times10^{-16}.
-\]
+$
 
-citeturn13search14
+[archived citation: bibliography verification pending]
 
 This leads to a fundamental design rule:
 
-\[
+$
 \boxed{\text{A new carrier is insufficient unless it possesses a new causal propagation law.}}
-\]
+$
 
 ### Why ordinary FTL immediately creates a causality problem
 
-Suppose Earth transmits a message over distance \(L\) at a hypothetical speed
+Suppose Earth transmits a message over distance $L$ at a hypothetical speed
 
-\[
+$
 u>c.
-\]
+$
 
 In Earth's frame,
 
-\[
+$
 \Delta x=L,\qquad
 \Delta t=\frac{L}{u}.
-\]
+$
 
-Now consider an observer moving at velocity \(v\). The Lorentz transformation gives
+Now consider an observer moving at velocity $v$. The Lorentz transformation gives
 
-\[
+$
 \Delta t'
 =
 \gamma
 \left(
 \Delta t-\frac{v\Delta x}{c^2}
 \right),
-\]
+$
 
 where
 
-\[
+$
 \gamma=\frac{1}{\sqrt{1-v^2/c^2}}.
-\]
+$
 
 Substitution gives
 
-\[
+$
 \boxed{
 \Delta t'
 =
@@ -186,43 +188,43 @@ Substitution gives
 \frac1u-\frac{v}{c^2}
 \right)
 }.
-\]
+$
 
 Therefore
 
-\[
+$
 \Delta t'<0
-\]
+$
 
 whenever
 
-\[
+$
 \boxed{
 v>\frac{c^2}{u}.
 }
-\]
+$
 
 Take an apparently modest example:
 
-\[
+$
 u=4c.
-\]
+$
 
 Then the condition is only
 
-\[
+$
 v>0.25c.
-\]
+$
 
-For an observer moving at \(0.5c\),
+For an observer moving at $0.5c$,
 
-\[
+$
 \gamma\simeq1.1547,
-\]
+$
 
 and
 
-\[
+$
 \frac{c\Delta t'}{L}
 =
 \gamma
@@ -232,11 +234,11 @@ and
 =
 1.1547(0.25-0.5)
 \approx-0.289.
-\]
+$
 
 In that inertial frame, reception occurs **before transmission**.
 
-This is not merely a semantic issue about coordinates. Once controllable FTL communication can be performed in suitable relative frames, one can attempt a return message and construct tachyonic-antitelephone-type causal loops. This connection between superluminal signalling and reversed event ordering is a central reason FTL communication is far more profound than making a faster radio transmitter. Work on superluminal propagation in relativistic frameworks consequently has to address global causality, not merely local speed. citeturn11search12turn13search7
+This is not merely a semantic issue about coordinates. Once controllable FTL communication can be performed in suitable relative frames, one can attempt a return message and construct tachyonic-antitelephone-type causal loops. This connection between superluminal signalling and reversed event ordering is a central reason FTL communication is far more profound than making a faster radio transmitter. Work on superluminal propagation in relativistic frameworks consequently has to address global causality, not merely local speed. [archived citation: bibliography verification pending]
 
 This observation gives *Moving Observer* an unusually natural entrance into the problem.
 
@@ -266,7 +268,7 @@ reception B ●
           Δt' < 0
 ```
 
-The visualisation could let a researcher vary \(u/c\), \(v/c\), distance and return-path assumptions and watch the causal ordering change.
+The visualisation could let a researcher vary $u/c$, $v/c$, distance and return-path assumptions and watch the causal ordering change.
 
 ### The correct experimental definition of "FTL"
 
@@ -274,15 +276,15 @@ This project should not define success as a pulse peak apparently arriving early
 
 Define a binary transmitted message
 
-\[
+$
 X\in\{0,1\}
-\]
+$
 
-and the receiver's observation before the ordinary light-front arrival as \(Y\).
+and the receiver's observation before the ordinary light-front arrival as $Y$.
 
 The mutual information is
 
-\[
+$
 I(X;Y)
 =
 \sum_{x,y}
@@ -290,17 +292,17 @@ p(x,y)
 \log_2
 \frac{p(x,y)}
 {p(x)p(y)}.
-\]
+$
 
 A genuine FTL communication observation requires:
 
-\[
+$
 \boxed{
 I(X;Y_{\rm pre-lightcone})>0
 }
-\]
+$
 
-with a statistically significant result and with no causal side channel carrying information from \(X\) to the receiver.
+with a statistically significant result and with no causal side channel carrying information from $X$ to the receiver.
 
 This is much stronger than asking whether two detectors exhibit correlated outputs.
 
@@ -314,7 +316,7 @@ The literature does not give us one promising, overlooked particle that can simp
 |---|---|---:|---|
 | Electromagnetic photons | Mature communications technology | **No** | Engineering baseline |
 | Neutrinos | Produced and detected experimentally | **No evidence** | Poor FTL candidate |
-| Gravitational waves | Directly detected astrophysically | **No; observed speed is extremely close to \(c\)** | Not an FTL carrier |
+| Gravitational waves | Directly detected astrophysically | **No; observed speed is extremely close to $c$** | Not an FTL carrier |
 | Quantum entanglement | Strongly experimentally established | **No** | Valuable no-signalling control |
 | Quantum teleportation | Experimentally demonstrated | **No** without classical communication | Valuable control |
 | "Fast-light" / anomalous wave propagation | Wave reshaping phenomena exist | **No demonstrated pre-lightcone information channel** | Must test information front, not peak |
@@ -324,21 +326,21 @@ The literature does not give us one promising, overlooked particle that can simp
 | Microscopic "Hyperwave" | Published theoretical proposal | **Unverified** | Closest literature match to your original idea |
 | Lorentz-violating/extra-dimensional channels | Model-dependent theoretical possibilities | **No demonstrated communication channel** | Boundary research |
 
-The experimental evidence for Bell nonlocality is very strong. For example, Hensen and collaborators performed a loophole-free Bell test using electron spins separated by 1.3 km. But Bell nonlocality is not the same thing as sending a controllable message outside the light cone. citeturn13search0
+The experimental evidence for Bell nonlocality is very strong. For example, Hensen and collaborators performed a loophole-free Bell test using electron spins separated by 1.3 km. But Bell nonlocality is not the same thing as sending a controllable message outside the light cone. [archived citation: bibliography verification pending]
 
 ### Why quantum entanglement does not solve it
 
 Suppose Alice and Bob share the Bell state
 
-\[
+$
 |\Phi^+\rangle
 =
 \frac{|00\rangle+|11\rangle}{\sqrt2}.
-\]
+$
 
 Bob's reduced state is
 
-\[
+$
 \rho_B
 =
 {\rm Tr}_A
@@ -347,25 +349,25 @@ Bob's reduced state is
 \right)
 =
 \frac{I}{2}.
-\]
+$
 
 Alice can choose a measurement basis, but Bob's locally observable probability distribution remains independent of that choice until additional classical information arrives. In general, a bipartite correlation obeys no-signalling when
 
-\[
+$
 \sum_a P(a,b|x,y)
-\]
+$
 
-is independent of Alice's setting \(x\), and correspondingly Alice's marginal is independent of Bob's setting.
+is independent of Alice's setting $x$, and correspondingly Alice's marginal is independent of Bob's setting.
 
-Quantum teleportation is sometimes misunderstood in exactly this context. Relativistic formulations of teleportation explicitly retain a causal classical-communication component; entanglement supplies a resource, but it does not eliminate the classical information transfer. citeturn11search2turn11search12
+Quantum teleportation is sometimes misunderstood in exactly this context. Relativistic formulations of teleportation explicitly retain a causal classical-communication component; entanglement supplies a resource, but it does not eliminate the classical information transfer. [archived citation: bibliography verification pending]
 
-So a Proxima station stocked in advance with \(10^{30}\) entangled pairs would still not let Earth choose "0" or "1" today and allow Proxima to discover that choice instantaneously.
+So a Proxima station stocked in advance with $10^{30}$ entangled pairs would still not let Earth choose "0" or "1" today and allow Proxima to discover that choice instantaneously.
 
 That negative result should actually be included experimentally in **Causal Frontier**. Simulate an entangled channel and demonstrate
 
-\[
+$
 I(X;Y_{\rm Bob})=0
-\]
+$
 
 before the classical message arrives.
 
@@ -373,11 +375,11 @@ It becomes the project's first calibration test: the framework must correctly re
 
 ### Wormholes are more interesting, but much harder
 
-A traversable wormhole changes the topology/geometry of the path rather than propelling a particle locally past \(c\). This distinction matters.
+A traversable wormhole changes the topology/geometry of the path rather than propelling a particle locally past $c$. This distinction matters.
 
 The Einstein field equations are
 
-\[
+$
 \boxed{
 G_{\mu\nu}
 +
@@ -385,49 +387,49 @@ G_{\mu\nu}
 =
 \frac{8\pi G}{c^4}T_{\mu\nu}.
 }
-\]
+$
 
 The conceptual programme is:
 
-\[
+$
 T_{\mu\nu}
 \longrightarrow
 g_{\mu\nu}
 \longrightarrow
 \text{causal geodesics}.
-\]
+$
 
-A celebrated Gao–Jafferis–Wall construction found that an interaction producing negative average null energy could render an Einstein–Rosen bridge traversable in its theoretical setting. Significantly, the authors explicitly noted that their construction cannot be used to violate causality. citeturn11search1
+A celebrated Gao–Jafferis–Wall construction found that an interaction producing negative average null energy could render an Einstein–Rosen bridge traversable in its theoretical setting. Significantly, the authors explicitly noted that their construction cannot be used to violate causality. [archived citation: bibliography verification pending]
 
 That is a theme throughout serious wormhole work: making a mathematical throat traversable is not equivalent to obtaining an arbitrary time machine or laboratory communication instrument.
 
 The relevant null-energy condition is
 
-\[
+$
 T_{\mu\nu}k^\mu k^\nu\ge0
-\]
+$
 
-for every null vector \(k^\mu\).
+for every null vector $k^\mu$.
 
 An averaged version along a null geodesic is approximately
 
-\[
+$
 \int_{\gamma}
 T_{\mu\nu}
 k^\mu k^\nu
 d\lambda
 \ge0.
-\]
+$
 
-Traversability in many constructions requires violating such classical energy conditions. Quantum field theory does permit negative local energy densities, but it constrains their magnitude and duration through quantum energy inequalities rather than offering an unrestricted reservoir of exotic energy. citeturn17search0turn17search11
+Traversability in many constructions requires violating such classical energy conditions. Quantum field theory does permit negative local energy densities, but it constrains their magnitude and duration through quantum energy inequalities rather than offering an unrestricted reservoir of exotic energy. [archived citation: bibliography verification pending]
 
 ### Warp geometry is the most useful speculative direction
 
-Alcubierre's idea was fundamentally different from accelerating a particle through local space beyond \(c\). He specified a spacetime metric that contracts and expands geometry so that a region could have an arbitrarily large effective coordinate displacement while objects inside remain locally timelike. The original work already acknowledged that exotic matter would be required. citeturn16search0
+Alcubierre's idea was fundamentally different from accelerating a particle through local space beyond $c$. He specified a spacetime metric that contracts and expands geometry so that a region could have an arbitrarily large effective coordinate displacement while objects inside remain locally timelike. The original work already acknowledged that exotic matter would be required. [archived citation: bibliography verification pending]
 
 A representative form of the metric is
 
-\[
+$
 ds^2
 =
 -c^2dt^2
@@ -435,40 +437,40 @@ ds^2
 [dx-v_s(t)f(r_s)dt]^2
 +
 dy^2+dz^2,
-\]
+$
 
 where
 
-\[
+$
 r_s=
 \sqrt{
 [x-x_s(t)]^2+y^2+z^2
 }
-\]
+$
 
-and \(f(r_s)\) is a shape function satisfying approximately
+and $f(r_s)$ is a shape function satisfying approximately
 
-\[
+$
 f\rightarrow1
 \quad\text{inside the bubble},
-\]
+$
 
-\[
+$
 f\rightarrow0
 \quad\text{outside}.
-\]
+$
 
 This gives us something computationally concrete.
 
 Given
 
-\[
+$
 g_{\mu\nu}(x^\alpha),
-\]
+$
 
 we calculate the Christoffel symbols,
 
-\[
+$
 \Gamma^\rho_{\mu\nu}
 =
 \frac12g^{\rho\sigma}
@@ -479,38 +481,38 @@ we calculate the Christoffel symbols,
 -
 \partial_\sigma g_{\mu\nu}
 \right),
-\]
+$
 
 then curvature,
 
-\[
+$
 R^\rho_{\ \sigma\mu\nu},
-\]
+$
 
 the Ricci tensor,
 
-\[
+$
 R_{\mu\nu},
-\]
+$
 
 Ricci scalar,
 
-\[
+$
 R,
-\]
+$
 
 and Einstein tensor,
 
-\[
+$
 G_{\mu\nu}
 =
 R_{\mu\nu}
 -\frac12Rg_{\mu\nu}.
-\]
+$
 
 We then invert Einstein's equation:
 
-\[
+$
 \boxed{
 T_{\mu\nu}^{\rm required}
 =
@@ -520,7 +522,7 @@ G_{\mu\nu}
 +\Lambda g_{\mu\nu}
 \right).
 }
-\]
+$
 
 This is the key idea for your project.
 
@@ -534,15 +536,15 @@ we ask:
 
 That is a much more powerful scientific question.
 
-Modern warp-drive literature is still actively contested. Bobrick and Martire constructed general models including positive-energy **subluminal** spherical warp drives and explored superluminal configurations under quantum-inequality constraints. citeturn16search1turn16search4 Lentz proposed positive-energy hyper-fast soliton solutions sourced in an Einstein–Maxwell–plasma framework. citeturn16search5turn16search8 But Santiago, Schuster and Visser subsequently argued that physically reasonable generic warp drives violate the null energy condition, and recent analyses continue scrutinising these constructions. citeturn12search1turn12search5
+Modern warp-drive literature is still actively contested. Bobrick and Martire constructed general models including positive-energy **subluminal** spherical warp drives and explored superluminal configurations under quantum-inequality constraints. [archived citation: bibliography verification pending] Lentz proposed positive-energy hyper-fast soliton solutions sourced in an Einstein–Maxwell–plasma framework. [archived citation: bibliography verification pending] But Santiago, Schuster and Visser subsequently argued that physically reasonable generic warp drives violate the null energy condition, and recent analyses continue scrutinising these constructions. [archived citation: bibliography verification pending]
 
-A 2026 classification study goes still further, highlighting misconceptions and errors in parts of the contemporary warp-drive literature and deriving additional no-go results. citeturn12search0turn12search4
+A 2026 classification study goes still further, highlighting misconceptions and errors in parts of the contemporary warp-drive literature and deriving additional no-go results. [archived citation: bibliography verification pending]
 
 Therefore this field remains an excellent place for **critical computational research**, but not a place where we should write "physics has solved warp drive".
 
 ### The Hyperwave idea is extremely close to what you independently imagined
 
-Lorenzo Pieri's *Hyperwave* proposal deliberately shrinks the warp structure because communication does not need to transport people, spacecraft or even conventional equipment. The paper argues that the total negative-energy requirement falls dramatically in the small-radius limit and suggests a tubular prearranged structure through which microscopic warp configurations could travel; their deceleration would release energetic particles that could represent information. citeturn11search0turn16search12
+Lorenzo Pieri's *Hyperwave* proposal deliberately shrinks the warp structure because communication does not need to transport people, spacecraft or even conventional equipment. The paper argues that the total negative-energy requirement falls dramatically in the small-radius limit and suggests a tubular prearranged structure through which microscopic warp configurations could travel; their deceleration would release energetic particles that could represent information. [archived citation: bibliography verification pending]
 
 This is conceptually very close to:
 
@@ -552,19 +554,19 @@ That is an excellent insight—but because it is already in the literature, we n
 
 The strongest research question becomes:
 
-\[
+$
 \boxed{
 \text{Can a microscopic spacetime pulse that represents one bit have a physically realisable }T_{\mu\nu}?
 }
-\]
+$
 
 And then:
 
-\[
+$
 \boxed{
 \text{Does it transmit new mutual information outside the background light cone without creating causal inconsistency?}
 }
-\]
+$
 
 That is where I believe your project can become interesting.
 
@@ -580,61 +582,61 @@ The first layer answers only:
 
 Create two moving observers,
 
-\[
+$
 O_A:\quad z_A^\mu(\tau_A)
-\]
+$
 
 and
 
-\[
+$
 O_B:\quad z_B^\mu(\tau_B).
-\]
+$
 
-At transmitter event \(A\), observer \(O_A\) randomly chooses
+At transmitter event $A$, observer $O_A$ randomly chooses
 
-\[
+$
 X\in\{0,1\}.
-\]
+$
 
-The receiving observer records all detector output \(Y(t)\).
+The receiving observer records all detector output $Y(t)$.
 
-In the ordinary background metric \(g^{(0)}_{\mu\nu}\), calculate the first possible light arrival,
+In the ordinary background metric $g^{(0)}_{\mu\nu}$, calculate the first possible light arrival,
 
-\[
+$
 t_c.
-\]
+$
 
 Then divide receiver data into
 
-\[
+$
 Y_< =Y(t<t_c)
-\]
+$
 
 and
 
-\[
+$
 Y_\ge=Y(t\ge t_c).
-\]
+$
 
 The primary statistic is
 
-\[
+$
 I_< =I(X;Y_<).
-\]
+$
 
 The null hypothesis becomes
 
-\[
+$
 H_0:
 I_<=0.
-\]
+$
 
 The extraordinary hypothesis is
 
-\[
+$
 H_1:
 I_<>0.
-\]
+$
 
 This automatically rejects dozens of misleading effects.
 
@@ -642,9 +644,9 @@ A detector pulse that moves earlier because of filter reshaping does not pass un
 
 A quantum correlation does not pass unless Bob's local outcomes reveal Alice's choice.
 
-A simulation with an apparent coordinate speed \(>c\) does not pass unless the two message events are spacelike under the baseline metric.
+A simulation with an apparent coordinate speed $>c$ does not pass unless the two message events are spacelike under the baseline metric.
 
-A system using prearranged information at the receiver does not pass because \(Y\) must depend on the **newly and randomly selected** \(X\).
+A system using prearranged information at the receiver does not pass because $Y$ must depend on the **newly and randomly selected** $X$.
 
 This is the single most important methodological innovation I would put at the centre of the work.
 
@@ -652,24 +654,24 @@ This is the single most important methodological innovation I would put at the c
 
 Now define a candidate modified spacetime,
 
-\[
+$
 g_{\mu\nu}
 =
 \eta_{\mu\nu}
 +h_{\mu\nu},
-\]
+$
 
 where
 
-\[
+$
 \eta_{\mu\nu}
-\]
+$
 
-is Minkowski spacetime and \(h_{\mu\nu}\) is the engineered perturbation.
+is Minkowski spacetime and $h_{\mu\nu}$ is the engineered perturbation.
 
 Instead of guessing the material, specify a communications objective:
 
-\[
+$
 \mathcal{J}
 =
 w_t\,t_{\rm arrival}
@@ -681,68 +683,68 @@ w_K\,K_{\rm curvature}
 w_C\,C_{\rm causality}
 +
 w_Q\,Q_{\rm inequality}.
-\]
+$
 
 Here:
 
-\[
+$
 E_{\rm abs}
 =
 \int |\rho|\,dV,
-\]
+$
 
 rather than only
 
-\[
+$
 \int\rho\,dV,
-\]
+$
 
 because positive and negative energy cancellation must not hide enormous local requirements.
 
 A useful maximum-curvature metric might include the Kretschmann scalar
 
-\[
+$
 K
 =
 R_{\alpha\beta\gamma\delta}
 R^{\alpha\beta\gamma\delta}.
-\]
+$
 
 For each candidate metric, calculate
 
-\[
+$
 T_{\mu\nu}
 =
 \frac{c^4}{8\pi G}G_{\mu\nu}.
-\]
+$
 
-Then decompose it for an observer with four-velocity \(u^\mu\).
+Then decompose it for an observer with four-velocity $u^\mu$.
 
 Energy density:
 
-\[
+$
 \rho
 =
 T_{\mu\nu}u^\mu u^\nu.
-\]
+$
 
 Energy flux:
 
-\[
+$
 q_\alpha
 =
 -h_\alpha^{\ \mu}T_{\mu\nu}u^\nu.
-\]
+$
 
 Spatial stress:
 
-\[
+$
 S_{\alpha\beta}
 =
 h_\alpha^{\ \mu}
 h_\beta^{\ \nu}
 T_{\mu\nu}.
-\]
+$
 
 Now test whether the required tensor resembles **anything physically producible**.
 
@@ -750,9 +752,9 @@ That distinction is crucial because a metric is not an engineering design.
 
 A symbolic equation saying
 
-\[
+$
 G_{\mu\nu}=8\pi GT_{\mu\nu}/c^4
-\]
+$
 
 only tells us what matter would be required. It does not show that the required matter exists.
 
@@ -762,19 +764,19 @@ Call it the **Moving-Observer Causal Corridor**, or MOCC.
 
 Let Earth and Proxima follow moving endpoint worldlines,
 
-\[
+$
 z_E^\mu(\tau_E),
 \qquad
 z_P^\mu(\tau_P).
-\]
+$
 
-Rather than assuming stationary endpoints, use actual astrometric propagation—the direct continuation of *Moving Observer*. Your existing work already emphasises the importance of relative motion and proper frame definitions. fileciteturn2file0L2-L2
+Rather than assuming stationary endpoints, use actual astrometric propagation—the direct continuation of *Moving Observer*. Your existing work already emphasises the importance of relative motion and proper frame definitions. [archived file reference: not independently resolvable]
 
 Define a world-tube connecting the moving endpoints.
 
 For example,
 
-\[
+$
 \mathbf{x}_c(s,t)
 =
 (1-s)\mathbf{x}_E(t)
@@ -782,11 +784,11 @@ For example,
 s\mathbf{x}_P(t),
 \qquad
 0\le s\le1.
-\]
+$
 
 Define perpendicular distance from any point to that instantaneous corridor as
 
-\[
+$
 r_\perp(\mathbf{x},t)
 =
 \left\|
@@ -794,11 +796,11 @@ r_\perp(\mathbf{x},t)
 -
 \mathbf{x}_c(s_\ast,t)
 \right\|.
-\]
+$
 
 Then introduce a smooth corridor function
 
-\[
+$
 F(r_\perp)
 =
 \frac12
@@ -808,23 +810,23 @@ F(r_\perp)
 \frac{r_\perp-R}{\Delta}
 \right)
 \right],
-\]
+$
 
-with radius \(R\) and wall thickness \(\Delta\).
+with radius $R$ and wall thickness $\Delta$.
 
 The computer can then explore candidate shift fields,
 
-\[
+$
 \boldsymbol{\beta}(\mathbf{x},t)
 =
 v_{\rm eff}(t)
 F(r_\perp)
 \,\hat{\mathbf{s}},
-\]
+$
 
-in a \(3+1\) metric,
+in a $3+1$ metric,
 
-\[
+$
 ds^2
 =
 -\alpha^2 c^2dt^2
@@ -832,49 +834,49 @@ ds^2
 \gamma_{ij}
 (dx^i+\beta^i dt)
 (dx^j+\beta^jdt).
-\]
+$
 
 We then **do not assume the metric is physical**.
 
 We ask the computer:
 
-\[
+$
 \text{What }T_{\mu\nu}\text{ would this corridor require?}
-\]
+$
 
 and:
 
-\[
+$
 \text{Does any observer measure }\rho<0?
-\]
+$
 
-\[
+$
 \text{Does }T_{\mu\nu}k^\mu k^\nu<0?
-\]
+$
 
-\[
+$
 \text{Does ANEC fail?}
-\]
+$
 
-\[
+$
 \text{Do quantum-energy bounds become catastrophic?}
-\]
+$
 
-\[
+$
 \text{Does }K\rightarrow l_P^{-4}\text{ anywhere?}
-\]
+$
 
-\[
+$
 \text{Does a horizon form?}
-\]
+$
 
-\[
+$
 \text{Can the transmitter actually create/control the leading edge?}
-\]
+$
 
-\[
+$
 \text{Can two corridors form a closed causal curve?}
-\]
+$
 
 That would turn an imaginative idea into a very serious computational experiment.
 
@@ -884,28 +886,28 @@ This is particularly important when evaluating the Hyperwave argument.
 
 One can reduce a **total integrated energy** by shrinking the bubble to an extraordinarily small radius. But if the geometry is pushed towards Planckian dimensions,
 
-\[
+$
 l_P
 =
 \sqrt{\frac{\hbar G}{c^3}}
 \approx1.616\times10^{-35}\ {\rm m},
-\]
+$
 
 then classical general relativity itself is no longer obviously a trustworthy description.
 
 Therefore:
 
-\[
+$
 \boxed{
 \text{small total energy}
 \not\Rightarrow
 \text{physically easy geometry}.
 }
-\]
+$
 
 One might instead obtain very small volume multiplied by fantastically large energy density and curvature.
 
-Earlier quantum-inequality work on the Alcubierre metric found precisely this kind of difficulty, deriving extremely small wall-thickness scales and enormous energetic requirements under its assumptions. citeturn17search2 More recent analyses continue to evaluate warp metrics against quantum-energy restrictions rather than treating local negative energy as freely scalable. citeturn17search8
+Earlier quantum-inequality work on the Alcubierre metric found precisely this kind of difficulty, deriving extremely small wall-thickness scales and enormous energetic requirements under its assumptions. [archived citation: bibliography verification pending] More recent analyses continue to evaluate warp metrics against quantum-energy restrictions rather than treating local negative energy as freely scalable. [archived citation: bibliography verification pending]
 
 This is one of the most valuable things your project could test quantitatively.
 
@@ -913,52 +915,52 @@ This is one of the most valuable things your project could test quantitatively.
 
 The ideal parallel-plate Casimir energy scales as
 
-\[
+$
 \frac{E_{\rm Cas}}{A}
 =
 -\frac{\pi^2\hbar c}{720a^3},
-\]
+$
 
 with pressure
 
-\[
+$
 P_{\rm Cas}
 =
 -\frac{\pi^2\hbar c}{240a^4},
-\]
+$
 
-where \(a\) is plate separation.
+where $a$ is plate separation.
 
-The existence of quantum-vacuum/Casimir effects demonstrates that naïve classical positive-energy assumptions require qualification; it does **not** establish that an arbitrary negative stress-energy tensor can be assembled at macroscopic scale and shaped into a warp metric. Current quantum-energy-inequality research specifically concerns the restrictions on the amount and duration of negative energy. citeturn17search0turn17search1
+The existence of quantum-vacuum/Casimir effects demonstrates that naïve classical positive-energy assumptions require qualification; it does **not** establish that an arbitrary negative stress-energy tensor can be assembled at macroscopic scale and shaped into a warp metric. Current quantum-energy-inequality research specifically concerns the restrictions on the amount and duration of negative energy. [archived citation: bibliography verification pending]
 
 So our code should never compare only:
 
-\[
+$
 E_{\rm needed}
 \stackrel{?}{<}
 E_{\rm Casimir}.
-\]
+$
 
 It needs to compare the **complete tensors**
 
-\[
+$
 T_{\mu\nu}^{\rm required}
 \quad\text{versus}\quad
 T_{\mu\nu}^{\rm candidate}.
-\]
+$
 
 A matching scalar energy is insufficient.
 
 This could be a particularly strong contribution because it converts the vague question "is enough negative energy available?" into the much harder and scientifically correct question:
 
-\[
+$
 \boxed{
 \|T_{\mu\nu}^{\rm required}
 -
 T_{\mu\nu}^{\rm realisable}\|
 \rightarrow0?
 }
-\]
+$
 
 ### AI's real role
 
@@ -968,7 +970,7 @@ But it can perform three legitimate roles.
 
 First, it can search a parameter space of metrics:
 
-\[
+$
 \Theta
 =
 \{
@@ -976,45 +978,45 @@ R,\Delta,v_s,
 \alpha,\beta^i,
 \gamma_{ij},\ldots
 \}
-\]
+$
 
 and minimise a constrained functional,
 
-\[
+$
 \Theta^\ast
 =
 \arg\min_\Theta \mathcal J(\Theta).
-\]
+$
 
 Automatic differentiation and GPU optimisation could search millions of metric variants while imposing Einstein-equation and energy-condition penalties.
 
-Second, symbolic AI can search families of \(T_{\mu\nu}\) produced by known fields—electromagnetic fields, plasmas, scalar fields or quantum-vacuum models—and see how closely those tensors approach the required source.
+Second, symbolic AI can search families of $T_{\mu\nu}$ produced by known fields—electromagnetic fields, plasmas, scalar fields or quantum-vacuum models—and see how closely those tensors approach the required source.
 
 Third, AI can reduce the *subjective* experience of interstellar latency without changing propagation speed.
 
-Suppose Earth and Proxima maintain predictive digital twins. Instead of repeatedly transmitting full state \(s_t\), each side predicts
+Suppose Earth and Proxima maintain predictive digital twins. Instead of repeatedly transmitting full state $s_t$, each side predicts
 
-\[
+$
 \hat{s}_t=f_\theta(s_{<t})
-\]
+$
 
 and transmits only innovation,
 
-\[
+$
 e_t=s_t-\hat{s}_t.
-\]
+$
 
 The information burden is then approximately determined by
 
-\[
+$
 H(S_t|\hat S_t)
-\]
+$
 
 rather than
 
-\[
+$
 H(S_t).
-\]
+$
 
 That can reduce communications traffic enormously when both sides share predictive models.
 
@@ -1028,47 +1030,47 @@ The project should deliberately have a **physical branch that can be built with 
 
 ### The practical interstellar link
 
-For an actual long-range interstellar system, photons remain the strongest baseline. Interstellar links are profoundly photon-starved, which makes photon information efficiency more relevant than terrestrial-style high spectral efficiency. Work on interstellar downlinks therefore emphasises pulse-position modulation and photon-counting techniques. citeturn11search7turn11search10
+For an actual long-range interstellar system, photons remain the strongest baseline. Interstellar links are profoundly photon-starved, which makes photon information efficiency more relevant than terrestrial-style high spectral efficiency. Work on interstellar downlinks therefore emphasises pulse-position modulation and photon-counting techniques. [archived citation: bibliography verification pending]
 
-A 2025 experiment demonstrated **14.5 information bits per incident photon** at 1550 nm after 87.5 dB attenuation using very-high-order pulse-position modulation, illustrating how much information can be extracted from a photon-starved optical channel. citeturn11search3
+A 2025 experiment demonstrated **14.5 information bits per incident photon** at 1550 nm after 87.5 dB attenuation using very-high-order pulse-position modulation, illustrating how much information can be extracted from a photon-starved optical channel. [archived citation: bibliography verification pending]
 
 This is where a "best modulation technique for Proxima" question becomes technically meaningful.
 
-For \(M\)-ary pulse-position modulation, one pulse occupies one of \(M\) temporal slots:
+For $M$-ary pulse-position modulation, one pulse occupies one of $M$ temporal slots:
 
-\[
+$
 \text{bits/symbol}
 =
 \log_2M.
-\]
+$
 
 For
 
-\[
+$
 M=1024,
-\]
+$
 
 that is
 
-\[
+$
 10\ {\rm bits/symbol}.
-\]
+$
 
 For
 
-\[
+$
 M=65536,
-\]
+$
 
 it is
 
-\[
+$
 16\ {\rm bits/symbol}.
-\]
+$
 
-At the quantum-optical level, one useful pure-loss channel capacity expression in terms of mean received photons per mode \(n_s\) is
+At the quantum-optical level, one useful pure-loss channel capacity expression in terms of mean received photons per mode $n_s$ is
 
-\[
+$
 \frac{C_{\rm GH}}{B}
 =
 \log_2(1+n_s)
@@ -1078,9 +1080,9 @@ n_s
 \left(
 1+\frac1{n_s}
 \right),
-\]
+$
 
-which illustrates why extremely low photon occupancy can produce high information per photon even though absolute data rates may remain low. Photon-efficient experimental work is now approaching these extreme regimes. citeturn11search3
+which illustrates why extremely low photon occupancy can produce high information per photon even though absolute data rates may remain low. Photon-efficient experimental work is now approaching these extreme regimes. [archived citation: bibliography verification pending]
 
 A practical architecture would therefore resemble:
 
@@ -1123,64 +1125,64 @@ AI predictive-state reconstruction
 Recovered information
 ```
 
-Photon-efficient deep-space communication literature already treats high-order PPM as a natural format in this environment, while experimental quantum-optical receiver research is exploring measurements that outperform simple independent on/off slot detection. citeturn11search10turn11search19
+Photon-efficient deep-space communication literature already treats high-order PPM as a natural format in this environment, while experimental quantum-optical receiver research is exploring measurements that outperform simple independent on/off slot detection. [archived citation: bibliography verification pending]
 
 ### A simple Proxima-scale link calculation
 
 Consider an illustrative—not mission-approved—system:
 
-\[
+$
 \lambda=1\ \mu{\rm m},
-\]
+$
 
-\[
+$
 D_t=10\ {\rm m},
-\]
+$
 
-\[
+$
 D_r=30\ {\rm m},
-\]
+$
 
-\[
+$
 P_t=1\,{\rm kW},
-\]
+$
 
 and distance
 
-\[
+$
 R\simeq4.24\ {\rm ly}
 \simeq4.01\times10^{16}\ {\rm m}.
-\]
+$
 
 For a diffraction-limited circular transmitter, the first-null angular scale is approximately
 
-\[
+$
 \theta
 \simeq
 1.22\frac{\lambda}{D_t}.
-\]
+$
 
 Thus
 
-\[
+$
 \theta
 \simeq
 1.22\times10^{-7}\ {\rm rad}.
-\]
+$
 
 The approximate beam radius at Proxima is then
 
-\[
+$
 r_b
 \simeq
 R\theta
 \simeq
 4.89\times10^9\ {\rm m}.
-\]
+$
 
 If we use a crude uniform-disc geometric estimate for illustration,
 
-\[
+$
 \eta_{\rm geo}
 \sim
 \frac{
@@ -1189,60 +1191,60 @@ If we use a crude uniform-disc geometric estimate for illustration,
 \pi r_b^2
 }
 \simeq9.4\times10^{-18}.
-\]
+$
 
 The received power before optical losses is approximately
 
-\[
+$
 P_r
 \sim
 P_t\eta_{\rm geo}
 \simeq
 9.4\times10^{-15}\ {\rm W}.
-\]
+$
 
-At \(1\,\mu{\rm m}\), photon energy is
+At $1\,\mu{\rm m}$, photon energy is
 
-\[
+$
 E_\gamma
 =
 \frac{hc}{\lambda}
 \simeq
 1.99\times10^{-19}\ {\rm J}.
-\]
+$
 
 Therefore the idealised incident photon rate is of order
 
-\[
+$
 \dot N_\gamma
 =
 \frac{P_r}{E_\gamma}
 \simeq4.7\times10^4\ {\rm photons\,s^{-1}}.
-\]
+$
 
-With an illustrative aggregate efficiency of \(20\%\),
+With an illustrative aggregate efficiency of $20\%$,
 
-\[
+$
 \dot N_{\rm det}
 \sim9.5\times10^3\ {\rm s^{-1}}.
-\]
+$
 
 A real link model must replace this simplified area-ratio estimate with the Airy intensity profile and include pointing loss, atmospheric transmission if applicable, telescope throughput, detector efficiency, stellar background, zodiacal background, interstellar extinction, finite linewidth, clock errors and coding margins. But it demonstrates the correct engineering principle:
 
-\[
+$
 \boxed{
 D_t,\ D_r,\ P_t,\ \lambda,\ \text{coding}
 \quad\text{can improve bit rate tremendously}
 }
-\]
+$
 
 while
 
-\[
+$
 \boxed{
 t_{\rm propagation}=\frac Rc
 }
-\]
+$
 
 does not change.
 
@@ -1270,13 +1272,13 @@ That hardware branch would establish your project's **real communications compet
 
 A more ambitious laboratory extension could include:
 
-\[
+$
 \text{SPDC entangled-photon source}
 \rightarrow
 \text{Alice}
 +
 \text{Bob}.
-\]
+$
 
 Alice's settings should come from a fast random source.
 
@@ -1286,9 +1288,9 @@ Then deliberately try to classify Alice's randomly chosen setting from Bob's loc
 
 Expected result:
 
-\[
+$
 I(X_{\rm Alice};Y_{\rm Bob})\approx0.
-\]
+$
 
 After the classical records are compared, Bell correlations appear.
 
@@ -1296,7 +1298,7 @@ This would give your project a beautiful experimental message:
 
 > "Quantum mechanics gives nonlocal correlations—but our own communication criterion correctly distinguishes correlation from information transfer."
 
-That conclusion is consistent with loophole-free Bell experiments and relativistic no-signalling structure. citeturn13search0turn13search3
+That conclusion is consistent with loophole-free Bell experiments and relativistic no-signalling structure. [archived citation: bibliography verification pending]
 
 ### The simulation stack
 
@@ -1304,32 +1306,32 @@ I would implement the research in progressively harder layers.
 
 The **special-relativity simulator** needs only NumPy/TypeScript and should calculate:
 
-\[
+$
 x'=\gamma(x-vt),
-\]
+$
 
-\[
+$
 t'=\gamma
 \left(
 t-\frac{vx}{c^2}
 \right),
-\]
+$
 
 light cones, hypothetical FTL trajectories, return paths and causality inversions.
 
 The **information simulator** generates random transmitted messages, noisy detection records and computes:
 
-\[
+$
 I(X;Y),
-\]
+$
 
 bit-error rate,
 
-\[
+$
 {\rm BER}
 =
 \frac{N_{\rm errors}}{N_{\rm bits}},
-\]
+$
 
 false-positive probability and confidence intervals.
 
@@ -1337,7 +1339,7 @@ The **optical simulator** handles diffraction, photons, noise and PPM/FEC.
 
 The **GR engine** computes:
 
-\[
+$
 g_{\mu\nu},
 \quad
 g^{\mu\nu},
@@ -1353,13 +1355,13 @@ R,
 G_{\mu\nu},
 \quad
 T_{\mu\nu}.
-\]
+$
 
-The **energy-condition engine** evaluates NEC/WEC/DEC/SEC across large observer samples rather than checking only one preferred observer. That is especially important because recent warp-drive criticism has emphasised that favourable energy density for one family of observers does not prove the full weak energy condition. citeturn12search1turn16search23
+The **energy-condition engine** evaluates NEC/WEC/DEC/SEC across large observer samples rather than checking only one preferred observer. That is especially important because recent warp-drive criticism has emphasised that favourable energy density for one family of observers does not prove the full weak energy condition. [archived citation: bibliography verification pending]
 
 The **geodesic engine** integrates
 
-\[
+$
 \frac{d^2x^\mu}{d\lambda^2}
 +
 \Gamma^\mu_{\alpha\beta}
@@ -1367,22 +1369,22 @@ The **geodesic engine** integrates
 \frac{dx^\beta}{d\lambda}
 =
 0.
-\]
+$
 
 For a null signal,
 
-\[
+$
 g_{\mu\nu}
 \frac{dx^\mu}{d\lambda}
 \frac{dx^\nu}{d\lambda}
 =0.
-\]
+$
 
 Then the key metric is not "bubble velocity".
 
 It is:
 
-\[
+$
 \boxed{
 \Delta t_{\rm gain}
 =
@@ -1390,11 +1392,11 @@ t_{\rm arrival}^{\rm background}
 -
 t_{\rm arrival}^{\rm candidate}.
 }
-\]
+$
 
 And simultaneously:
 
-\[
+$
 E_{\rm req},
 \quad
 \rho_{\min},
@@ -1406,7 +1408,7 @@ K_{\max},
 {\rm QEI\ violation},
 \quad
 {\rm CTC\ flag}.
-\]
+$
 
 That gives each candidate a multidimensional feasibility score rather than a sensational yes/no answer.
 
@@ -1414,37 +1416,37 @@ That gives each candidate a multidimensional feasibility score rather than a sen
 
 For every metric family, sweep logarithmically across:
 
-\[
+$
 R
 =
 10^{-35}
 \ {\rm m}
 \rightarrow
 10^3\ {\rm m},
-\]
+$
 
-\[
+$
 \Delta/R
 =
 10^{-6}
 \rightarrow1,
-\]
+$
 
 and candidate effective speeds such as
 
-\[
+$
 v_{\rm eff}/c
 =
 0.1,\ 0.5,\ 0.99,\ 1.001,\ 1.01,\ 1.1,\ 2,\ 10,\ 10^3.
-\]
+$
 
 But any calculation approaching the Planck regime must be clearly flagged:
 
-\[
+$
 R\sim l_P
 \quad\Rightarrow\quad
 \text{classical-GR reliability unknown}.
-\]
+$
 
 We should never colour a Planck-scale simulation green and call it "feasible".
 
@@ -1454,7 +1456,7 @@ Before inventing a new geometry, reproduce the published proposal.
 
 That means:
 
-\[
+$
 \text{paper equations}
 \rightarrow
 \text{independent implementation}
@@ -1466,43 +1468,43 @@ That means:
 \text{energy-condition tests}
 \rightarrow
 \text{causal analysis}.
-\]
+$
 
-Hyperwave is sufficiently close to your original concept that a rigorous independent reproduction gives us a valuable benchmark. citeturn11search0turn11search4
+Hyperwave is sufficiently close to your original concept that a rigorous independent reproduction gives us a valuable benchmark. [archived citation: bibliography verification pending]
 
 Then change one assumption at a time.
 
 For example:
 
-\[
+$
 \text{static endpoints}
 \rightarrow
 \text{moving Earth/Alpha Cen endpoints},
-\]
+$
 
-\[
+$
 \text{scalar total energy}
 \rightarrow
 \text{full stress-energy matching},
-\]
+$
 
-\[
+$
 \text{nominal warp velocity}
 \rightarrow
 \text{mutual-information arrival time},
-\]
+$
 
-\[
+$
 \text{local energy condition}
 \rightarrow
 \text{observer-robust NEC/WEC/ANEC},
-\]
+$
 
-\[
+$
 \text{one-way geometry}
 \rightarrow
 \text{return-path causality test}.
-\]
+$
 
 That is much more likely to yield a defensible research contribution than starting with an arbitrary new metric and declaring it revolutionary.
 
@@ -1514,27 +1516,27 @@ I would pre-register five levels.
 |---|---|---|
 | **A** | Better bits/photon or lower-energy interstellar link | Real communications engineering |
 | **B** | New mathematical metric with interesting causal properties | Theoretical result |
-| **C** | Required \(T_{\mu\nu}\) approximated by known physical fields | Major theoretical advance |
-| **D** | Laboratory spacetime/field experiment produces statistically significant pre-lightcone \(I(X;Y)>0\) | Extraordinary new physics |
+| **C** | Required $T_{\mu\nu}$ approximated by known physical fields | Major theoretical advance |
+| **D** | Laboratory spacetime/field experiment produces statistically significant pre-lightcone $I(X;Y)>0$ | Extraordinary new physics |
 | **E** | Independent replication and causal-loop analysis survive | Physics-changing discovery |
 
 For Level D, I would demand something like:
 
-\[
+$
 I(X;Y_<)>0
-\]
+$
 
 with a preregistered analysis,
 
-\[
+$
 p\ll 5.7\times10^{-7}
-\]
+$
 
 for a nominal five-sigma-scale discovery threshold, independent clocks, blinded message generation, physical isolation of all ordinary channels, independent replication and a systematic-error budget.
 
 Anything weaker remains interesting—but should not be called FTL communication.
 
-That scientific restraint is exactly what makes *Moving Observer* credible, and I would preserve it here. fileciteturn3file0L2-L2
+That scientific restraint is exactly what makes *Moving Observer* credible, and I would preserve it here. [archived file reference: not independently resolvable]
 
 ## The research programme I would publish
 
@@ -1550,7 +1552,7 @@ with the subtitle:
 
 The core scientific question would be:
 
-\[
+$
 \boxed{
 \begin{aligned}
 &\text{Given a random information source at event }A,\\
@@ -1558,11 +1560,11 @@ The core scientific question would be:
 &I(X;Y)>0\text{ at a spacelike-separated event }B?
 \end{aligned}
 }
-\]
+$
 
 The project then divides possible answers into:
 
-\[
+$
 \mathcal C
 =
 \{
@@ -1574,11 +1576,11 @@ The project then divides possible answers into:
 \text{warp},
 \text{modified causality}
 \}.
-\]
+$
 
 Every candidate passes through the same pipeline:
 
-\[
+$
 \boxed{
 \text{Carrier/geometry}
 \rightarrow
@@ -1592,11 +1594,11 @@ I(X;Y)
 \rightarrow
 \text{causality audit}
 }
-\]
+$
 
 and, for spacetime-engineering candidates,
 
-\[
+$
 \boxed{
 g_{\mu\nu}
 \rightarrow
@@ -1608,29 +1610,29 @@ T_{\mu\nu}
 \rightarrow
 \text{physical source search}.
 }
-\]
+$
 
 This creates several publishable questions even if the final answer to FTL is "no".
 
 One is whether any claimed superluminal scheme survives a **common information-theoretic definition of signalling**.
 
-Another is whether microscopic warp communication really reduces the physical burden once **curvature, stress tensor structure and quantum-energy constraints** are included, rather than only total integrated energy. The published Hyperwave proposal makes this particularly timely. citeturn11search0turn17search2
+Another is whether microscopic warp communication really reduces the physical burden once **curvature, stress tensor structure and quantum-energy constraints** are included, rather than only total integrated energy. The published Hyperwave proposal makes this particularly timely. [archived citation: bibliography verification pending]
 
-Another is whether moving endpoints materially alter causal-corridor engineering. That is directly connected to your existing relative-motion research. fileciteturn2file0L2-L2
+Another is whether moving endpoints materially alter causal-corridor engineering. That is directly connected to your existing relative-motion research. [archived file reference: not independently resolvable]
 
 Another is how close a physically realizable stress-energy basis can approximate a desired metric:
 
-\[
+$
 T_{\mu\nu}^{\rm candidate}
 =
 \sum_i a_i T_{\mu\nu}^{(i)},
-\]
+$
 
-where \(i\) might represent electromagnetic fields, plasmas, scalar-field models or permitted quantum-vacuum configurations.
+where $i$ might represent electromagnetic fields, plasmas, scalar-field models or permitted quantum-vacuum configurations.
 
 Then minimise
 
-\[
+$
 \mathcal L_T
 =
 \int
@@ -1641,15 +1643,15 @@ T_{\mu\nu}^{\rm candidate}(x)
 T_{\mu\nu}^{\rm required}(x)
 \right\|^2
 d^4x.
-\]
+$
 
 If the minimum is enormous for every known source family, that is a meaningful negative result.
 
 If an unexpected source family makes
 
-\[
+$
 \mathcal L_T
-\]
+$
 
 dramatically smaller, that is an interesting result.
 
@@ -1691,19 +1693,19 @@ Toggle:
 
 Users should be able to change:
 
-\[
+$
 R,\Delta,v_{\rm eff},D,
-\]
+$
 
 observer velocity,
 
-\[
+$
 v_{\rm obs},
-\]
+$
 
 and model family, then instantly see:
 
-\[
+$
 t_{\rm light},
 \quad
 t_{\rm candidate},
@@ -1719,37 +1721,37 @@ K_{\max},
 {\rm ANEC},
 \quad
 {\rm CTC}.
-\]
+$
 
 This would make an abstract GR problem visually understandable while preserving rigorous equations underneath.
 
 ### My assessment of the scientific opportunity
 
-The probability that present-day physics contains a simple, overlooked electronic modulation technique that sends messages to Proxima in minutes is extremely low given relativity, quantum-field-theoretic causality, Bell/no-signalling evidence, neutrino measurements and gravitational-wave propagation constraints. citeturn13search0turn13search9turn13search14turn13search7
+The probability that present-day physics contains a simple, overlooked electronic modulation technique that sends messages to Proxima in minutes is extremely low given relativity, quantum-field-theoretic causality, Bell/no-signalling evidence, neutrino measurements and gravitational-wave propagation constraints. [archived citation: bibliography verification pending]
 
 But the research question is **not worthless**.
 
 It becomes scientifically interesting precisely when framed as a falsifiable search over the boundary between:
 
-\[
+$
 \text{nonlocal correlation},
-\]
+$
 
-\[
+$
 \text{apparent superluminality},
-\]
+$
 
-\[
+$
 \text{effective geometric shortcuts},
-\]
+$
 
 and
 
-\[
+$
 \text{actual controllable superluminal information}.
-\]
+$
 
-Warp-drive research remains active in 2026, including new classification, energy-condition and observational-signature work, but it remains theoretical rather than an experimentally demonstrated engineering technology. citeturn12search0turn12search7turn12search13
+Warp-drive research remains active in 2026, including new classification, energy-condition and observational-signature work, but it remains theoretical rather than an experimentally demonstrated engineering technology. [archived citation: bibliography verification pending]
 
 So I would **not** make your project's thesis:
 
@@ -2805,6 +2807,6 @@ and complete causal-systematics analysis.
 Start from first principles.
 ```
 
-The crucial strategic choice is therefore **not** between "accept Einstein" and "challenge Einstein". It is between making an unfalsifiable FTL claim and constructing an experiment that would be capable of proving us wrong either way. The latter is much closer to how Einstein's own breakthroughs worked: identify which assumptions are operational, construct thought experiments that expose contradictions, derive the mathematics, then ask nature to decide. The experimental record so far strongly supports relativistic causal signalling even while allowing striking quantum nonlocal correlations and mathematically exotic spacetime solutions. citeturn13search0turn13search14turn13search7
+The crucial strategic choice is therefore **not** between "accept Einstein" and "challenge Einstein". It is between making an unfalsifiable FTL claim and constructing an experiment that would be capable of proving us wrong either way. The latter is much closer to how Einstein's own breakthroughs worked: identify which assumptions are operational, construct thought experiments that expose contradictions, derive the mathematics, then ask nature to decide. The experimental record so far strongly supports relativistic causal signalling even while allowing striking quantum nonlocal correlations and mathematically exotic spacetime solutions. [archived citation: bibliography verification pending]
 
 For your research trajectory, **Causal Frontier / Moving Observer: Causal Corridor** is therefore the direction I would choose: not another "warp drive" demonstration, but a common mathematical, computational and information-theoretic framework for determining whether *anything* has genuinely carried a newly chosen bit outside its ordinary light cone.
