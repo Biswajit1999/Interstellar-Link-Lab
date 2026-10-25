@@ -1,0 +1,24 @@
+name: Advanced photon-counting modem and geometry
+on:
+  push:
+    paths:
+      - "research_tools/advanced/**"
+      - "research_tools/tests/test_advanced.py"
+      - ".github/workflows/photon-frontier-advanced.yml"
+  pull_request:
+    paths:
+      - "research_tools/advanced/**"
+      - "research_tools/tests/test_advanced.py"
+      - ".github/workflows/photon-frontier-advanced.yml"
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install numerical dependencies
+        run: python -m pip install "numpy>=1.26,<3" "scipy>=1.11,<2"
+      - name: Run source-level physical and modem controls
+        run: python -m unittest discover -s research_tools/tests -p "test_advanced.py" -v
