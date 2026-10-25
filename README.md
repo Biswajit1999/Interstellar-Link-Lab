@@ -19,12 +19,14 @@ The original [*Beyond the Light Cone* research report](docs/research/ORIGINAL_BE
 
 - [**Sourced scientific programme: optical engineering vs true causal FTL**](docs/research/RESEARCH_PROGRAM_2026.md)
 - [**Modulation results: photon-counting OOK and M-ary PPM**](docs/research/MODULATION_RESULTS.md) — [source code](research_tools/modulation.py), [regression tests](research_tools/tests/test_modulation.py), [trade-study plot](figures/modulation_trade_2026.svg)
-- [**Causal and speculative GR falsification protocol**](docs/research/CAUSAL_TEST_PROTOCOL.md)
+- [**Causal and speculative GR falsification protocol**](docs/research/CAUSAL_TEST_PROTOCOL.md) — [executable null/positive/side-channel controls](research_tools/causal_controls.py), [tests](research_tools/tests/test_causal.py)
+- [**2026 source verification and hypothesis audit**](docs/research/LITERATURE_AUDIT.md)
 
 ### Current executable reference (standard-library only)
 
 ```bash
 python -m research_tools.modulation
+python -m research_tools.causal_controls
 python -m unittest discover -s research_tools/tests -v
 ```
 
