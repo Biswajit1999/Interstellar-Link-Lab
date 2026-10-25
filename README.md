@@ -13,6 +13,29 @@ Interstellar Link Lab is an end-to-end, reproducible research programme for:
 - Classical and quantum no-signalling control experiments.
 - Exploratory numerical-relativity / spacetime hypotheses, **clearly segregated from validated engineering**.
 
+## Research programme — 25 October 2026
+
+The original [*Beyond the Light Cone* research report](docs/research/ORIGINAL_BEYOND_THE_LIGHT_CONE.md) and [original scientific research brief](docs/research/ORIGINAL_RESEARCH_BRIEF.md) are preserved here as historical inputs, separate from the current verified-source research and working code. Earlier source-message citation tokens in those archived documents are **not validated bibliographic citations**.
+
+- [**Sourced scientific programme: optical engineering vs true causal FTL**](docs/research/RESEARCH_PROGRAM_2026.md)
+- [**Modulation results: photon-counting OOK and M-ary PPM**](docs/research/MODULATION_RESULTS.md) — [source code](research_tools/modulation.py), [regression tests](research_tools/tests/test_modulation.py), [trade-study plot](figures/modulation_trade_2026.svg)
+- [**Causal and speculative GR falsification protocol**](docs/research/CAUSAL_TEST_PROTOCOL.md)
+
+### Current executable reference (standard-library only)
+
+```bash
+python -m research_tools.modulation
+python -m unittest discover -s research_tools/tests -v
+```
+
+The reference code calculates uncoded M-PPM Poisson SER with random tie-breaking, optimized hard-threshold binary OOK information, peak-to-average pulse-intensity constraints and **light-time-preserving** ideal full-message timing. The reported mutual-information rates are *ideal hard-decision channel benchmarks*, not achieved reliable throughput. A GitHub Actions workflow runs the standalone reference tests.
+
+**Scientific conclusion remains unchanged:** higher information throughput is demonstrably possible, but no verified channel carries freshly chosen information outside the actual physical future light cone. No FTL claim, proprietary device claim or CCSDS compliance claim is made.
+
+**Repository transfer status:** The v0.3 research notes and the standalone modulation reference source/tests are online. The earlier v0.2 viewer and report text are also online. The broader 97-file v0.2 source/reports/figure archive is **not yet fully uploaded**; standalone code here must not be represented as that full source archive.
+
+---
+
 ## Scientific viewer
 
 [**Open the complete offline v0.2 experiment viewer**](docs/index.html)  
