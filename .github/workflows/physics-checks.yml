@@ -1,0 +1,25 @@
+name: Interstellar Link Lab physics checks
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research_tools/**'
+      - '.github/workflows/physics-checks.yml'
+  pull_request:
+    paths:
+      - 'research_tools/**'
+      - '.github/workflows/physics-checks.yml'
+jobs:
+  standalone-physics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify analytical limits and information causality
+        run: python -m unittest discover -s research_tools/tests -v
+      - name: Verify deterministic simulation output
+        run: python -m research_tools.modulation > /tmp/modulation.json
+      - name: Parse numerical output
+        run: python -c "import json; x=json.load(open('/tmp/modulation.json')); assert 'photon_starved' in x and 'brighter_link' in x"
