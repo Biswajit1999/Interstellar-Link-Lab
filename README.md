@@ -15,7 +15,8 @@ Interstellar Link Lab is an end-to-end, reproducible research programme for:
 
 ## Scientific viewer
 
-[**Open the complete offline v0.2 experiment viewer**](docs/index.html)
+[**Open the complete offline v0.2 experiment viewer**](docs/index.html)  
+[**Read the eleven-page report as accessible text**](docs/RESEARCH_REPORT_v0.2_TEXT.md)
 
 The embedded viewer provides the v0.2 synthetic interstellar-link experiment, analytical PPM comparisons, photon-counting models, and illustrative reconstructed images. It is a **static display of already simulated data**, not an online telescope or operational spacecraft link.
 
@@ -23,7 +24,7 @@ The embedded viewer provides the v0.2 synthetic interstellar-link experiment, an
 
 **Standalone repository** — no Moving Observer submodules or dependency.
 
-The offline v0.2 viewer has been uploaded through the repository's authenticated GitHub connection. **The full v0.2.0 source-code ZIP, numerical source, tests, plots and PDF have NOT yet been uploaded to this GitHub repository.** Their independent local release bundle is being transferred separately. Do not infer that this repository is complete because the viewer is present.
+The offline v0.2 viewer and an accessible text extraction of the 11-page research report have been uploaded through the repository's authenticated GitHub connection. **The full v0.2.0 source-code ZIP, numerical source, tests, plots and PDF have NOT yet been uploaded to this GitHub repository.** Their independent local release bundle is being transferred separately. Do not infer that this repository is complete because the viewer is present.
 
 The source archive was locally checked as a 60-test simulation baseline, but GitHub Actions has not yet independently rerun all those tests in this separate repository. The aim is to make the standalone repository reproducible and reviewable end-to-end.
 
