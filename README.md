@@ -13,6 +13,22 @@ Interstellar Link Lab is an end-to-end, reproducible research programme for:
 - Classical and quantum no-signalling control experiments.
 - Exploratory numerical-relativity / spacetime hypotheses, **clearly segregated from validated engineering**.
 
+## Photon Frontier: coded optical receiver, 25 October 2026
+
+A new [research note](docs/research/PHOTON_FRONTIER_V04.md) describes a soft-count M-PPM modem with an illustrative constraint-length-3 convolutional code, Viterbi decoding and CRC-validated fresh messages. The [source](research_tools/advanced/) and [regression tests](research_tools/tests/test_advanced.py) are executable Python, not a claimed flight implementation. The [parameter-study script](scripts/run_optical_modem_study.py) reproduces a 24-condition Monte Carlo sweep. Conditions: 0.08 background photons/slot, 100 μs/slot and 60 independently seeded frames per parameter point.
+
+At four detected signal photons per illuminated slot, **8-PPM accepted 58/60 frames** versus **44/60 for 16-PPM**. This is a variable pulse-photon experiment; average optical power is **not controlled** between configurations. The ideal 4.24-light-year geometric budget assumes a 1 kW transmitter, 10 m transmit aperture, 30 m receiver, 1550 nm light and 20% scalar throughput. It estimates approximately 22,411 detected photons/s **before detailed acquisition, pointing and detector losses**.
+
+- [Open the optical-link calculator](web/link-calculator.html) (offline HTML, editable parameters and explicit assumptions).
+- [View the optical transmitter/channel/receiver diagram](hardware/diagrams/optical_system.svg).
+- [View the 3.3 V optical timing reference circuit](hardware/diagrams/timing_loopback.svg), which is **not** SPAD electronics.
+- [Read the detector/electronics bench specification](hardware/OPTICAL_ARCHITECTURE.md).
+- [Read the manuscript and interface writing conventions](docs/WRITING_AND_DESIGN.md).
+
+The complete local v0.4 research package also contains a conventional five-page PDF paper, high-resolution figures, a deeper static analysis viewer, and additional source/tests awaiting verification in this online repository. The presence of documents, simulations, or a plotted photon rate is **not** a demonstration of interstellar hardware, a CCSDS compliant waveform or faster-than-light signalling.
+
+---
+
 ## Research programme — 25 October 2026
 
 The original [*Beyond the Light Cone* research report](docs/research/ORIGINAL_BEYOND_THE_LIGHT_CONE.md) and [original scientific research brief](docs/research/ORIGINAL_RESEARCH_BRIEF.md) are preserved here as historical inputs, separate from the current verified-source research and working code. Earlier source-message citation tokens in those archived documents are **not validated bibliographic citations**.
