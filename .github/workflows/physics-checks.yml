@@ -17,6 +17,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Install numerical dependencies for advanced modem tests
+        run: python -m pip install "numpy>=1.26,<3" "scipy>=1.11,<2"
       - name: Verify analytical limits and information causality
         run: python -m unittest discover -s research_tools/tests -v
       - name: Verify deterministic simulation output
