@@ -15,21 +15,21 @@ The transmitter is an ideal, untruncated TEM00 *Gaussian mode*, with 1/e² inten
 $$
 w(R)=w_0\sqrt{1+(R/z_R)^2},\qquad
 \theta_{\rm divergence}=\frac{\lambda}{\pi w_0}.
-$
+$$
 
 The receiving circular aperture has radius $a\ll w(R)$. Two orthogonal angular pointing errors are independent normal variables, each with standard deviation $\sigma_\theta$. The offset of the beam axis at the receiver is $\mathbf{r}=R\boldsymbol{\theta}$. In the small-aperture limit, instantaneous intensity gain is
 
 $$
 G=\exp[-2|\mathbf r|^2/w(R)^2],\qquad
 \mathbb{E}[G]=\frac{1}{1+4(R\sigma_\theta/w(R))^2}.
-$
+$$
 
 The *exact mean* aperture fraction for the convolution of a circular Gaussian beam with centered 2-D Gaussian pointing error is
 
 $$
 \overline{\eta}_{\mathrm{cap}} =
 1-\exp\left[-\frac{2a^2}{w(R)^2+4(R\sigma_\theta)^2}\right].
-$
+$$
 
 The averaged detected photon rate is $ \overline{\dot N} =
 [P\lambda/(hc)]\,\eta_{\rm system}\,\overline{\eta}_{\rm cap}$.
@@ -42,13 +42,13 @@ In ideal zero-background M-slot PPM with a mean $s$ signal photons in the pulse 
 
 $$
 P_{\rm SER}(s)=(1-1/M)e^{-s}.
-$
+$$
 
 The probability that all $n$ *uncoded* symbols are correct in a packet, conditional on one constant pointing gain $G$, is
 
 $$
 P_{\rm packet}(G)=[1-(1-1/M)\exp(-s_0G)]^n.
-$
+$$
 
 The correct pointing-averaged probability is $ \mathbb E[P_{\rm packet}(G)]$. The common shortcut $P_{\rm packet}(\mathbb E[G])$ is generally **not equal** to it. Our code uses deterministic Simpson quadrature over the analytically derived gain distribution and checks it against a seeded, independent random sampling estimate.
 
