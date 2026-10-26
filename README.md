@@ -1,5 +1,12 @@
 # Interstellar Link Lab
 
+## Illustrated engineering field guide — 26 October 2026
+
+Start with [**From a new bit on Earth to a distant receiver**](docs/research/ILLUSTRATED_FIELD_GUIDE.md). The guide explains, in order, the light-time problem, optical modem, electronic control, a 3.3 V visible-LED timing circuit, photon-counting receiver, coding, image prediction, and the quantum no-signalling test. Four [editable SVG diagrams](docs/figures/) accompany the engineering explanation.
+
+**Status:** the illustrated circuits are conceptual references, not a validated PCB or built high-voltage detector. The companion 15-page PDF and binary rendered figures have been generated separately but are not yet stored as binaries in this GitHub repository. No FTL signal has been demonstrated.
+
+
 **Photon-efficient interstellar communication · Deep-space optical links · Predictive imaging · Relativistic causality**
 
 **Research lead:** Biswajit Jana · **Stage:** scientific simulation prototype
