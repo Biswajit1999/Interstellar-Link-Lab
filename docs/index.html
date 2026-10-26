@@ -109,7 +109,7 @@
     <p class="index">Synthetic decoder test</p><h3>Pulse-position modulation</h3>
     <p>Put a pulse in one of M slots. Signal and background photons follow independent Poisson distributions. The receiver picks the strongest slot, breaking ties randomly.</p>
     <div class="controls">
-     <div class="control"><label for="order">PPM slots <output id="orderOut"></output></label><input id="order" type="range" min="2" max="16" step="2" value="8" list="slot-values"><datalist id="slot-values"><option value="2"></option><option value="4"></option><option value="8"></option><option value="16"></option></datalist></div>
+     <div class="control"><label for="order">PPM slots <output id="orderOut"></output></label><input id="order" type="range" min="1" max="4" step="1" value="3" list="slot-values"><datalist id="slot-values"><option value="1"></option><option value="2"></option><option value="3"></option><option value="4"></option></datalist></div>
      <div class="control"><label for="signal">Mean signal photons/pulse <output id="signalOut"></output></label><input id="signal" type="range" min="0" max="15" step=".25" value="2"></div>
      <div class="control"><label for="background">Mean background/slot <output id="backgroundOut"></output></label><input id="background" type="range" min="0" max="3" step=".05" value=".1"></div>
     </div>
