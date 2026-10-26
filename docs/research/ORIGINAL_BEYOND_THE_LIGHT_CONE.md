@@ -38,9 +38,9 @@ I would provisionally call this project **Causal Frontier**, with a research bra
 
 That could become a genuinely interesting continuation of your portfolio because it connects the question "what does a moving observer see?" to the much deeper question:
 
-$
+$$
 \boxed{\text{What events can a moving observer causally influence?}}
-$
+$$
 
 The most useful "Einstein-like" move here is not to assume that $c$ can be beaten. It is to identify exactly which assumption creates the speed limit, systematically remove assumptions one at a time, and calculate what happens.
 
@@ -48,35 +48,35 @@ The most useful "Einstein-like" move here is not to assume that $c$ can be beate
 
 There is also an important numerical correction to the example in your question. Proxima Centauri is not expected to reach its closest Solar encounter in the next hundred or thousand years. A 2026 Gaia-based encounter study predicts a minimum Sun–Proxima separation of
 
-$
+$$
 d_{\min}=0.9679\pm0.0044\ {\rm pc}
-$
+$$
 
 in
 
-$
+$$
 26.574\pm0.028\ {\rm kyr},
-$
+$$
 
 or roughly **26,600 years from now**. That minimum separation is approximately
 
-$
+$$
 0.9679(3.26156)\simeq3.157\ {\rm light\ years}.
-$
+$$
 
 The paper treats Proxima as part of the Alpha Centauri triple system for this encounter calculation. [archived citation: bibliography verification pending]
 
 At closest approach, therefore, an ordinary electromagnetic message would still require approximately
 
-$
+$$
 t_{\rm one-way}\approx3.16\ {\rm years},
-$
+$$
 
 and a request followed immediately by a reply would require at least
 
-$
+$$
 t_{\rm RTT}\approx6.31\ {\rm years}.
-$
+$$
 
 At today's roughly 4.2-light-year scale, the corresponding round-trip latency is roughly 8.5 years. Better transmitters can increase the number of bits delivered; they cannot reduce that propagation latency if the signal remains confined to the ordinary light cone.
 
@@ -90,38 +90,38 @@ It is tempting to search for another wavelength, particle or modulation method: 
 
 In flat spacetime the invariant interval is
 
-$
+$$
 ds^2=-c^2dt^2+dx^2+dy^2+dz^2.
-$
+$$
 
 For two events separated by $(\Delta t,\Delta\mathbf{x})$,
 
-$
+$$
 \Delta s^2=
 |\Delta\mathbf{x}|^2-c^2\Delta t^2.
-$
+$$
 
 They are:
 
-$
+$$
 \begin{cases}
 \Delta s^2<0 & \text{timelike}\$4pt]
 \Delta s^2=0 & \text{null}\$4pt]
 \Delta s^2>0 & \text{spacelike}.
 \end{cases}
-$
+$$
 
 An ordinary light signal follows the boundary,
 
-$
+$$
 |\Delta\mathbf{x}|=c\Delta t.
-$
+$$
 
 To send information "faster than light" in the strong sense you are asking about means deliberately creating a message-dependent effect at a **spacelike-separated event**:
 
-$
+$$
 |\Delta\mathbf{x}|>c\Delta t.
-$
+$$
 
 Relativistic quantum field theory implements this causal structure through microcausality: observables associated with spacelike-separated local regions commute. Modern work continues to establish the relationship between no-signalling and this microcausal structure. [archived citation: bibliography verification pending]
 
@@ -129,57 +129,57 @@ So changing from radio photons to optical photons does not solve the problem.
 
 Neither does changing to another experimentally known messenger. Neutrino time-of-flight measurements are compatible with propagation at $c$, not controllably above it. [archived citation: bibliography verification pending] Gravitational waves are not an escape route either: the joint GW170817/GRB 170817A observation constrained their propagation speed relative to light to approximately
 
-$
+$$
 -3\times10^{-15}
 <
 \frac{v_{\rm GW}-c}{c}
 <
 7\times10^{-16}.
-$
+$$
 
 [archived citation: bibliography verification pending]
 
 This leads to a fundamental design rule:
 
-$
+$$
 \boxed{\text{A new carrier is insufficient unless it possesses a new causal propagation law.}}
-$
+$$
 
 ### Why ordinary FTL immediately creates a causality problem
 
 Suppose Earth transmits a message over distance $L$ at a hypothetical speed
 
-$
+$$
 u>c.
-$
+$$
 
 In Earth's frame,
 
-$
+$$
 \Delta x=L,\qquad
 \Delta t=\frac{L}{u}.
-$
+$$
 
 Now consider an observer moving at velocity $v$. The Lorentz transformation gives
 
-$
+$$
 \Delta t'
 =
 \gamma
 \left(
 \Delta t-\frac{v\Delta x}{c^2}
 \right),
-$
+$$
 
 where
 
-$
+$$
 \gamma=\frac{1}{\sqrt{1-v^2/c^2}}.
-$
+$$
 
 Substitution gives
 
-$
+$$
 \boxed{
 \Delta t'
 =
@@ -188,43 +188,43 @@ $
 \frac1u-\frac{v}{c^2}
 \right)
 }.
-$
+$$
 
 Therefore
 
-$
+$$
 \Delta t'<0
-$
+$$
 
 whenever
 
-$
+$$
 \boxed{
 v>\frac{c^2}{u}.
 }
-$
+$$
 
 Take an apparently modest example:
 
-$
+$$
 u=4c.
-$
+$$
 
 Then the condition is only
 
-$
+$$
 v>0.25c.
-$
+$$
 
 For an observer moving at $0.5c$,
 
-$
+$$
 \gamma\simeq1.1547,
-$
+$$
 
 and
 
-$
+$$
 \frac{c\Delta t'}{L}
 =
 \gamma
@@ -234,7 +234,7 @@ $
 =
 1.1547(0.25-0.5)
 \approx-0.289.
-$
+$$
 
 In that inertial frame, reception occurs **before transmission**.
 
@@ -276,15 +276,15 @@ This project should not define success as a pulse peak apparently arriving early
 
 Define a binary transmitted message
 
-$
+$$
 X\in\{0,1\}
-$
+$$
 
 and the receiver's observation before the ordinary light-front arrival as $Y$.
 
 The mutual information is
 
-$
+$$
 I(X;Y)
 =
 \sum_{x,y}
@@ -292,15 +292,15 @@ p(x,y)
 \log_2
 \frac{p(x,y)}
 {p(x)p(y)}.
-$
+$$
 
 A genuine FTL communication observation requires:
 
-$
+$$
 \boxed{
 I(X;Y_{\rm pre-lightcone})>0
 }
-$
+$$
 
 with a statistically significant result and with no causal side channel carrying information from $X$ to the receiver.
 
@@ -332,15 +332,15 @@ The experimental evidence for Bell nonlocality is very strong. For example, Hens
 
 Suppose Alice and Bob share the Bell state
 
-$
+$$
 |\Phi^+\rangle
 =
 \frac{|00\rangle+|11\rangle}{\sqrt2}.
-$
+$$
 
 Bob's reduced state is
 
-$
+$$
 \rho_B
 =
 {\rm Tr}_A
@@ -349,13 +349,13 @@ $
 \right)
 =
 \frac{I}{2}.
-$
+$$
 
 Alice can choose a measurement basis, but Bob's locally observable probability distribution remains independent of that choice until additional classical information arrives. In general, a bipartite correlation obeys no-signalling when
 
-$
+$$
 \sum_a P(a,b|x,y)
-$
+$$
 
 is independent of Alice's setting $x$, and correspondingly Alice's marginal is independent of Bob's setting.
 
@@ -365,9 +365,9 @@ So a Proxima station stocked in advance with $10^{30}$ entangled pairs would sti
 
 That negative result should actually be included experimentally in **Causal Frontier**. Simulate an entangled channel and demonstrate
 
-$
+$$
 I(X;Y_{\rm Bob})=0
-$
+$$
 
 before the classical message arrives.
 
@@ -379,7 +379,7 @@ A traversable wormhole changes the topology/geometry of the path rather than pro
 
 The Einstein field equations are
 
-$
+$$
 \boxed{
 G_{\mu\nu}
 +
@@ -387,17 +387,17 @@ G_{\mu\nu}
 =
 \frac{8\pi G}{c^4}T_{\mu\nu}.
 }
-$
+$$
 
 The conceptual programme is:
 
-$
+$$
 T_{\mu\nu}
 \longrightarrow
 g_{\mu\nu}
 \longrightarrow
 \text{causal geodesics}.
-$
+$$
 
 A celebrated Gao–Jafferis–Wall construction found that an interaction producing negative average null energy could render an Einstein–Rosen bridge traversable in its theoretical setting. Significantly, the authors explicitly noted that their construction cannot be used to violate causality. [archived citation: bibliography verification pending]
 
@@ -405,21 +405,21 @@ That is a theme throughout serious wormhole work: making a mathematical throat t
 
 The relevant null-energy condition is
 
-$
+$$
 T_{\mu\nu}k^\mu k^\nu\ge0
-$
+$$
 
 for every null vector $k^\mu$.
 
 An averaged version along a null geodesic is approximately
 
-$
+$$
 \int_{\gamma}
 T_{\mu\nu}
 k^\mu k^\nu
 d\lambda
 \ge0.
-$
+$$
 
 Traversability in many constructions requires violating such classical energy conditions. Quantum field theory does permit negative local energy densities, but it constrains their magnitude and duration through quantum energy inequalities rather than offering an unrestricted reservoir of exotic energy. [archived citation: bibliography verification pending]
 
@@ -429,7 +429,7 @@ Alcubierre's idea was fundamentally different from accelerating a particle throu
 
 A representative form of the metric is
 
-$
+$$
 ds^2
 =
 -c^2dt^2
@@ -437,40 +437,40 @@ ds^2
 [dx-v_s(t)f(r_s)dt]^2
 +
 dy^2+dz^2,
-$
+$$
 
 where
 
-$
+$$
 r_s=
 \sqrt{
 [x-x_s(t)]^2+y^2+z^2
 }
-$
+$$
 
 and $f(r_s)$ is a shape function satisfying approximately
 
-$
+$$
 f\rightarrow1
 \quad\text{inside the bubble},
-$
+$$
 
-$
+$$
 f\rightarrow0
 \quad\text{outside}.
-$
+$$
 
 This gives us something computationally concrete.
 
 Given
 
-$
+$$
 g_{\mu\nu}(x^\alpha),
-$
+$$
 
 we calculate the Christoffel symbols,
 
-$
+$$
 \Gamma^\rho_{\mu\nu}
 =
 \frac12g^{\rho\sigma}
@@ -481,38 +481,38 @@ $
 -
 \partial_\sigma g_{\mu\nu}
 \right),
-$
+$$
 
 then curvature,
 
-$
+$$
 R^\rho_{\ \sigma\mu\nu},
-$
+$$
 
 the Ricci tensor,
 
-$
+$$
 R_{\mu\nu},
-$
+$$
 
 Ricci scalar,
 
-$
+$$
 R,
-$
+$$
 
 and Einstein tensor,
 
-$
+$$
 G_{\mu\nu}
 =
 R_{\mu\nu}
 -\frac12Rg_{\mu\nu}.
-$
+$$
 
 We then invert Einstein's equation:
 
-$
+$$
 \boxed{
 T_{\mu\nu}^{\rm required}
 =
@@ -522,7 +522,7 @@ G_{\mu\nu}
 +\Lambda g_{\mu\nu}
 \right).
 }
-$
+$$
 
 This is the key idea for your project.
 
@@ -554,19 +554,19 @@ That is an excellent insight—but because it is already in the literature, we n
 
 The strongest research question becomes:
 
-$
+$$
 \boxed{
 \text{Can a microscopic spacetime pulse that represents one bit have a physically realisable }T_{\mu\nu}?
 }
-$
+$$
 
 And then:
 
-$
+$$
 \boxed{
 \text{Does it transmit new mutual information outside the background light cone without creating causal inconsistency?}
 }
-$
+$$
 
 That is where I believe your project can become interesting.
 
@@ -582,61 +582,61 @@ The first layer answers only:
 
 Create two moving observers,
 
-$
+$$
 O_A:\quad z_A^\mu(\tau_A)
-$
+$$
 
 and
 
-$
+$$
 O_B:\quad z_B^\mu(\tau_B).
-$
+$$
 
 At transmitter event $A$, observer $O_A$ randomly chooses
 
-$
+$$
 X\in\{0,1\}.
-$
+$$
 
 The receiving observer records all detector output $Y(t)$.
 
 In the ordinary background metric $g^{(0)}_{\mu\nu}$, calculate the first possible light arrival,
 
-$
+$$
 t_c.
-$
+$$
 
 Then divide receiver data into
 
-$
+$$
 Y_< =Y(t<t_c)
-$
+$$
 
 and
 
-$
+$$
 Y_\ge=Y(t\ge t_c).
-$
+$$
 
 The primary statistic is
 
-$
+$$
 I_< =I(X;Y_<).
-$
+$$
 
 The null hypothesis becomes
 
-$
+$$
 H_0:
 I_<=0.
-$
+$$
 
 The extraordinary hypothesis is
 
-$
+$$
 H_1:
 I_<>0.
-$
+$$
 
 This automatically rejects dozens of misleading effects.
 
@@ -654,24 +654,24 @@ This is the single most important methodological innovation I would put at the c
 
 Now define a candidate modified spacetime,
 
-$
+$$
 g_{\mu\nu}
 =
 \eta_{\mu\nu}
 +h_{\mu\nu},
-$
+$$
 
 where
 
-$
+$$
 \eta_{\mu\nu}
-$
+$$
 
 is Minkowski spacetime and $h_{\mu\nu}$ is the engineered perturbation.
 
 Instead of guessing the material, specify a communications objective:
 
-$
+$$
 \mathcal{J}
 =
 w_t\,t_{\rm arrival}
@@ -683,68 +683,68 @@ w_K\,K_{\rm curvature}
 w_C\,C_{\rm causality}
 +
 w_Q\,Q_{\rm inequality}.
-$
+$$
 
 Here:
 
-$
+$$
 E_{\rm abs}
 =
 \int |\rho|\,dV,
-$
+$$
 
 rather than only
 
-$
+$$
 \int\rho\,dV,
-$
+$$
 
 because positive and negative energy cancellation must not hide enormous local requirements.
 
 A useful maximum-curvature metric might include the Kretschmann scalar
 
-$
+$$
 K
 =
 R_{\alpha\beta\gamma\delta}
 R^{\alpha\beta\gamma\delta}.
-$
+$$
 
 For each candidate metric, calculate
 
-$
+$$
 T_{\mu\nu}
 =
 \frac{c^4}{8\pi G}G_{\mu\nu}.
-$
+$$
 
 Then decompose it for an observer with four-velocity $u^\mu$.
 
 Energy density:
 
-$
+$$
 \rho
 =
 T_{\mu\nu}u^\mu u^\nu.
-$
+$$
 
 Energy flux:
 
-$
+$$
 q_\alpha
 =
 -h_\alpha^{\ \mu}T_{\mu\nu}u^\nu.
-$
+$$
 
 Spatial stress:
 
-$
+$$
 S_{\alpha\beta}
 =
 h_\alpha^{\ \mu}
 h_\beta^{\ \nu}
 T_{\mu\nu}.
-$
+$$
 
 Now test whether the required tensor resembles **anything physically producible**.
 
@@ -752,9 +752,9 @@ That distinction is crucial because a metric is not an engineering design.
 
 A symbolic equation saying
 
-$
+$$
 G_{\mu\nu}=8\pi GT_{\mu\nu}/c^4
-$
+$$
 
 only tells us what matter would be required. It does not show that the required matter exists.
 
@@ -764,11 +764,11 @@ Call it the **Moving-Observer Causal Corridor**, or MOCC.
 
 Let Earth and Proxima follow moving endpoint worldlines,
 
-$
+$$
 z_E^\mu(\tau_E),
 \qquad
 z_P^\mu(\tau_P).
-$
+$$
 
 Rather than assuming stationary endpoints, use actual astrometric propagation—the direct continuation of *Moving Observer*. Your existing work already emphasises the importance of relative motion and proper frame definitions. [archived file reference: not independently resolvable]
 
@@ -776,7 +776,7 @@ Define a world-tube connecting the moving endpoints.
 
 For example,
 
-$
+$$
 \mathbf{x}_c(s,t)
 =
 (1-s)\mathbf{x}_E(t)
@@ -784,11 +784,11 @@ $
 s\mathbf{x}_P(t),
 \qquad
 0\le s\le1.
-$
+$$
 
 Define perpendicular distance from any point to that instantaneous corridor as
 
-$
+$$
 r_\perp(\mathbf{x},t)
 =
 \left\|
@@ -796,11 +796,11 @@ r_\perp(\mathbf{x},t)
 -
 \mathbf{x}_c(s_\ast,t)
 \right\|.
-$
+$$
 
 Then introduce a smooth corridor function
 
-$
+$$
 F(r_\perp)
 =
 \frac12
@@ -810,23 +810,23 @@ F(r_\perp)
 \frac{r_\perp-R}{\Delta}
 \right)
 \right],
-$
+$$
 
 with radius $R$ and wall thickness $\Delta$.
 
 The computer can then explore candidate shift fields,
 
-$
+$$
 \boldsymbol{\beta}(\mathbf{x},t)
 =
 v_{\rm eff}(t)
 F(r_\perp)
 \,\hat{\mathbf{s}},
-$
+$$
 
 in a $3+1$ metric,
 
-$
+$$
 ds^2
 =
 -\alpha^2 c^2dt^2
@@ -834,49 +834,49 @@ ds^2
 \gamma_{ij}
 (dx^i+\beta^i dt)
 (dx^j+\beta^jdt).
-$
+$$
 
 We then **do not assume the metric is physical**.
 
 We ask the computer:
 
-$
+$$
 \text{What }T_{\mu\nu}\text{ would this corridor require?}
-$
+$$
 
 and:
 
-$
+$$
 \text{Does any observer measure }\rho<0?
-$
+$$
 
-$
+$$
 \text{Does }T_{\mu\nu}k^\mu k^\nu<0?
-$
+$$
 
-$
+$$
 \text{Does ANEC fail?}
-$
+$$
 
-$
+$$
 \text{Do quantum-energy bounds become catastrophic?}
-$
+$$
 
-$
+$$
 \text{Does }K\rightarrow l_P^{-4}\text{ anywhere?}
-$
+$$
 
-$
+$$
 \text{Does a horizon form?}
-$
+$$
 
-$
+$$
 \text{Can the transmitter actually create/control the leading edge?}
-$
+$$
 
-$
+$$
 \text{Can two corridors form a closed causal curve?}
-$
+$$
 
 That would turn an imaginative idea into a very serious computational experiment.
 
@@ -886,24 +886,24 @@ This is particularly important when evaluating the Hyperwave argument.
 
 One can reduce a **total integrated energy** by shrinking the bubble to an extraordinarily small radius. But if the geometry is pushed towards Planckian dimensions,
 
-$
+$$
 l_P
 =
 \sqrt{\frac{\hbar G}{c^3}}
 \approx1.616\times10^{-35}\ {\rm m},
-$
+$$
 
 then classical general relativity itself is no longer obviously a trustworthy description.
 
 Therefore:
 
-$
+$$
 \boxed{
 \text{small total energy}
 \not\Rightarrow
 \text{physically easy geometry}.
 }
-$
+$$
 
 One might instead obtain very small volume multiplied by fantastically large energy density and curvature.
 
@@ -915,19 +915,19 @@ This is one of the most valuable things your project could test quantitatively.
 
 The ideal parallel-plate Casimir energy scales as
 
-$
+$$
 \frac{E_{\rm Cas}}{A}
 =
 -\frac{\pi^2\hbar c}{720a^3},
-$
+$$
 
 with pressure
 
-$
+$$
 P_{\rm Cas}
 =
 -\frac{\pi^2\hbar c}{240a^4},
-$
+$$
 
 where $a$ is plate separation.
 
@@ -935,32 +935,32 @@ The existence of quantum-vacuum/Casimir effects demonstrates that naïve classic
 
 So our code should never compare only:
 
-$
+$$
 E_{\rm needed}
 \stackrel{?}{<}
 E_{\rm Casimir}.
-$
+$$
 
 It needs to compare the **complete tensors**
 
-$
+$$
 T_{\mu\nu}^{\rm required}
 \quad\text{versus}\quad
 T_{\mu\nu}^{\rm candidate}.
-$
+$$
 
 A matching scalar energy is insufficient.
 
 This could be a particularly strong contribution because it converts the vague question "is enough negative energy available?" into the much harder and scientifically correct question:
 
-$
+$$
 \boxed{
 \|T_{\mu\nu}^{\rm required}
 -
 T_{\mu\nu}^{\rm realisable}\|
 \rightarrow0?
 }
-$
+$$
 
 ### AI's real role
 
@@ -970,7 +970,7 @@ But it can perform three legitimate roles.
 
 First, it can search a parameter space of metrics:
 
-$
+$$
 \Theta
 =
 \{
@@ -978,15 +978,15 @@ R,\Delta,v_s,
 \alpha,\beta^i,
 \gamma_{ij},\ldots
 \}
-$
+$$
 
 and minimise a constrained functional,
 
-$
+$$
 \Theta^\ast
 =
 \arg\min_\Theta \mathcal J(\Theta).
-$
+$$
 
 Automatic differentiation and GPU optimisation could search millions of metric variants while imposing Einstein-equation and energy-condition penalties.
 
@@ -996,27 +996,27 @@ Third, AI can reduce the *subjective* experience of interstellar latency without
 
 Suppose Earth and Proxima maintain predictive digital twins. Instead of repeatedly transmitting full state $s_t$, each side predicts
 
-$
+$$
 \hat{s}_t=f_\theta(s_{<t})
-$
+$$
 
 and transmits only innovation,
 
-$
+$$
 e_t=s_t-\hat{s}_t.
-$
+$$
 
 The information burden is then approximately determined by
 
-$
+$$
 H(S_t|\hat S_t)
-$
+$$
 
 rather than
 
-$
+$$
 H(S_t).
-$
+$$
 
 That can reduce communications traffic enormously when both sides share predictive models.
 
@@ -1038,39 +1038,39 @@ This is where a "best modulation technique for Proxima" question becomes technic
 
 For $M$-ary pulse-position modulation, one pulse occupies one of $M$ temporal slots:
 
-$
+$$
 \text{bits/symbol}
 =
 \log_2M.
-$
+$$
 
 For
 
-$
+$$
 M=1024,
-$
+$$
 
 that is
 
-$
+$$
 10\ {\rm bits/symbol}.
-$
+$$
 
 For
 
-$
+$$
 M=65536,
-$
+$$
 
 it is
 
-$
+$$
 16\ {\rm bits/symbol}.
-$
+$$
 
 At the quantum-optical level, one useful pure-loss channel capacity expression in terms of mean received photons per mode $n_s$ is
 
-$
+$$
 \frac{C_{\rm GH}}{B}
 =
 \log_2(1+n_s)
@@ -1080,7 +1080,7 @@ n_s
 \left(
 1+\frac1{n_s}
 \right),
-$
+$$
 
 which illustrates why extremely low photon occupancy can produce high information per photon even though absolute data rates may remain low. Photon-efficient experimental work is now approaching these extreme regimes. [archived citation: bibliography verification pending]
 
@@ -1131,58 +1131,58 @@ Photon-efficient deep-space communication literature already treats high-order P
 
 Consider an illustrative—not mission-approved—system:
 
-$
+$$
 \lambda=1\ \mu{\rm m},
-$
+$$
 
-$
+$$
 D_t=10\ {\rm m},
-$
+$$
 
-$
+$$
 D_r=30\ {\rm m},
-$
+$$
 
-$
+$$
 P_t=1\,{\rm kW},
-$
+$$
 
 and distance
 
-$
+$$
 R\simeq4.24\ {\rm ly}
 \simeq4.01\times10^{16}\ {\rm m}.
-$
+$$
 
 For a diffraction-limited circular transmitter, the first-null angular scale is approximately
 
-$
+$$
 \theta
 \simeq
 1.22\frac{\lambda}{D_t}.
-$
+$$
 
 Thus
 
-$
+$$
 \theta
 \simeq
 1.22\times10^{-7}\ {\rm rad}.
-$
+$$
 
 The approximate beam radius at Proxima is then
 
-$
+$$
 r_b
 \simeq
 R\theta
 \simeq
 4.89\times10^9\ {\rm m}.
-$
+$$
 
 If we use a crude uniform-disc geometric estimate for illustration,
 
-$
+$$
 \eta_{\rm geo}
 \sim
 \frac{
@@ -1191,60 +1191,60 @@ $
 \pi r_b^2
 }
 \simeq9.4\times10^{-18}.
-$
+$$
 
 The received power before optical losses is approximately
 
-$
+$$
 P_r
 \sim
 P_t\eta_{\rm geo}
 \simeq
 9.4\times10^{-15}\ {\rm W}.
-$
+$$
 
 At $1\,\mu{\rm m}$, photon energy is
 
-$
+$$
 E_\gamma
 =
 \frac{hc}{\lambda}
 \simeq
 1.99\times10^{-19}\ {\rm J}.
-$
+$$
 
 Therefore the idealised incident photon rate is of order
 
-$
+$$
 \dot N_\gamma
 =
 \frac{P_r}{E_\gamma}
 \simeq4.7\times10^4\ {\rm photons\,s^{-1}}.
-$
+$$
 
 With an illustrative aggregate efficiency of $20\%$,
 
-$
+$$
 \dot N_{\rm det}
 \sim9.5\times10^3\ {\rm s^{-1}}.
-$
+$$
 
 A real link model must replace this simplified area-ratio estimate with the Airy intensity profile and include pointing loss, atmospheric transmission if applicable, telescope throughput, detector efficiency, stellar background, zodiacal background, interstellar extinction, finite linewidth, clock errors and coding margins. But it demonstrates the correct engineering principle:
 
-$
+$$
 \boxed{
 D_t,\ D_r,\ P_t,\ \lambda,\ \text{coding}
 \quad\text{can improve bit rate tremendously}
 }
-$
+$$
 
 while
 
-$
+$$
 \boxed{
 t_{\rm propagation}=\frac Rc
 }
-$
+$$
 
 does not change.
 
@@ -1272,13 +1272,13 @@ That hardware branch would establish your project's **real communications compet
 
 A more ambitious laboratory extension could include:
 
-$
+$$
 \text{SPDC entangled-photon source}
 \rightarrow
 \text{Alice}
 +
 \text{Bob}.
-$
+$$
 
 Alice's settings should come from a fast random source.
 
@@ -1288,9 +1288,9 @@ Then deliberately try to classify Alice's randomly chosen setting from Bob's loc
 
 Expected result:
 
-$
+$$
 I(X_{\rm Alice};Y_{\rm Bob})\approx0.
-$
+$$
 
 After the classical records are compared, Bell correlations appear.
 
@@ -1306,32 +1306,32 @@ I would implement the research in progressively harder layers.
 
 The **special-relativity simulator** needs only NumPy/TypeScript and should calculate:
 
-$
+$$
 x'=\gamma(x-vt),
-$
+$$
 
-$
+$$
 t'=\gamma
 \left(
 t-\frac{vx}{c^2}
 \right),
-$
+$$
 
 light cones, hypothetical FTL trajectories, return paths and causality inversions.
 
 The **information simulator** generates random transmitted messages, noisy detection records and computes:
 
-$
+$$
 I(X;Y),
-$
+$$
 
 bit-error rate,
 
-$
+$$
 {\rm BER}
 =
 \frac{N_{\rm errors}}{N_{\rm bits}},
-$
+$$
 
 false-positive probability and confidence intervals.
 
@@ -1339,7 +1339,7 @@ The **optical simulator** handles diffraction, photons, noise and PPM/FEC.
 
 The **GR engine** computes:
 
-$
+$$
 g_{\mu\nu},
 \quad
 g^{\mu\nu},
@@ -1355,13 +1355,13 @@ R,
 G_{\mu\nu},
 \quad
 T_{\mu\nu}.
-$
+$$
 
 The **energy-condition engine** evaluates NEC/WEC/DEC/SEC across large observer samples rather than checking only one preferred observer. That is especially important because recent warp-drive criticism has emphasised that favourable energy density for one family of observers does not prove the full weak energy condition. [archived citation: bibliography verification pending]
 
 The **geodesic engine** integrates
 
-$
+$$
 \frac{d^2x^\mu}{d\lambda^2}
 +
 \Gamma^\mu_{\alpha\beta}
@@ -1369,22 +1369,22 @@ $
 \frac{dx^\beta}{d\lambda}
 =
 0.
-$
+$$
 
 For a null signal,
 
-$
+$$
 g_{\mu\nu}
 \frac{dx^\mu}{d\lambda}
 \frac{dx^\nu}{d\lambda}
 =0.
-$
+$$
 
 Then the key metric is not "bubble velocity".
 
 It is:
 
-$
+$$
 \boxed{
 \Delta t_{\rm gain}
 =
@@ -1392,11 +1392,11 @@ t_{\rm arrival}^{\rm background}
 -
 t_{\rm arrival}^{\rm candidate}.
 }
-$
+$$
 
 And simultaneously:
 
-$
+$$
 E_{\rm req},
 \quad
 \rho_{\min},
@@ -1408,7 +1408,7 @@ K_{\max},
 {\rm QEI\ violation},
 \quad
 {\rm CTC\ flag}.
-$
+$$
 
 That gives each candidate a multidimensional feasibility score rather than a sensational yes/no answer.
 
@@ -1416,37 +1416,37 @@ That gives each candidate a multidimensional feasibility score rather than a sen
 
 For every metric family, sweep logarithmically across:
 
-$
+$$
 R
 =
 10^{-35}
 \ {\rm m}
 \rightarrow
 10^3\ {\rm m},
-$
+$$
 
-$
+$$
 \Delta/R
 =
 10^{-6}
 \rightarrow1,
-$
+$$
 
 and candidate effective speeds such as
 
-$
+$$
 v_{\rm eff}/c
 =
 0.1,\ 0.5,\ 0.99,\ 1.001,\ 1.01,\ 1.1,\ 2,\ 10,\ 10^3.
-$
+$$
 
 But any calculation approaching the Planck regime must be clearly flagged:
 
-$
+$$
 R\sim l_P
 \quad\Rightarrow\quad
 \text{classical-GR reliability unknown}.
-$
+$$
 
 We should never colour a Planck-scale simulation green and call it "feasible".
 
@@ -1456,7 +1456,7 @@ Before inventing a new geometry, reproduce the published proposal.
 
 That means:
 
-$
+$$
 \text{paper equations}
 \rightarrow
 \text{independent implementation}
@@ -1468,7 +1468,7 @@ $
 \text{energy-condition tests}
 \rightarrow
 \text{causal analysis}.
-$
+$$
 
 Hyperwave is sufficiently close to your original concept that a rigorous independent reproduction gives us a valuable benchmark. [archived citation: bibliography verification pending]
 
@@ -1476,35 +1476,35 @@ Then change one assumption at a time.
 
 For example:
 
-$
+$$
 \text{static endpoints}
 \rightarrow
 \text{moving Earth/Alpha Cen endpoints},
-$
+$$
 
-$
+$$
 \text{scalar total energy}
 \rightarrow
 \text{full stress-energy matching},
-$
+$$
 
-$
+$$
 \text{nominal warp velocity}
 \rightarrow
 \text{mutual-information arrival time},
-$
+$$
 
-$
+$$
 \text{local energy condition}
 \rightarrow
 \text{observer-robust NEC/WEC/ANEC},
-$
+$$
 
-$
+$$
 \text{one-way geometry}
 \rightarrow
 \text{return-path causality test}.
-$
+$$
 
 That is much more likely to yield a defensible research contribution than starting with an arbitrary new metric and declaring it revolutionary.
 
@@ -1522,15 +1522,15 @@ I would pre-register five levels.
 
 For Level D, I would demand something like:
 
-$
+$$
 I(X;Y_<)>0
-$
+$$
 
 with a preregistered analysis,
 
-$
+$$
 p\ll 5.7\times10^{-7}
-$
+$$
 
 for a nominal five-sigma-scale discovery threshold, independent clocks, blinded message generation, physical isolation of all ordinary channels, independent replication and a systematic-error budget.
 
@@ -1552,7 +1552,7 @@ with the subtitle:
 
 The core scientific question would be:
 
-$
+$$
 \boxed{
 \begin{aligned}
 &\text{Given a random information source at event }A,\\
@@ -1560,11 +1560,11 @@ $
 &I(X;Y)>0\text{ at a spacelike-separated event }B?
 \end{aligned}
 }
-$
+$$
 
 The project then divides possible answers into:
 
-$
+$$
 \mathcal C
 =
 \{
@@ -1576,11 +1576,11 @@ $
 \text{warp},
 \text{modified causality}
 \}.
-$
+$$
 
 Every candidate passes through the same pipeline:
 
-$
+$$
 \boxed{
 \text{Carrier/geometry}
 \rightarrow
@@ -1594,11 +1594,11 @@ I(X;Y)
 \rightarrow
 \text{causality audit}
 }
-$
+$$
 
 and, for spacetime-engineering candidates,
 
-$
+$$
 \boxed{
 g_{\mu\nu}
 \rightarrow
@@ -1610,7 +1610,7 @@ T_{\mu\nu}
 \rightarrow
 \text{physical source search}.
 }
-$
+$$
 
 This creates several publishable questions even if the final answer to FTL is "no".
 
@@ -1622,17 +1622,17 @@ Another is whether moving endpoints materially alter causal-corridor engineering
 
 Another is how close a physically realizable stress-energy basis can approximate a desired metric:
 
-$
+$$
 T_{\mu\nu}^{\rm candidate}
 =
 \sum_i a_i T_{\mu\nu}^{(i)},
-$
+$$
 
 where $i$ might represent electromagnetic fields, plasmas, scalar-field models or permitted quantum-vacuum configurations.
 
 Then minimise
 
-$
+$$
 \mathcal L_T
 =
 \int
@@ -1643,15 +1643,15 @@ T_{\mu\nu}^{\rm candidate}(x)
 T_{\mu\nu}^{\rm required}(x)
 \right\|^2
 d^4x.
-$
+$$
 
 If the minimum is enormous for every known source family, that is a meaningful negative result.
 
 If an unexpected source family makes
 
-$
+$$
 \mathcal L_T
-$
+$$
 
 dramatically smaller, that is an interesting result.
 
@@ -1693,19 +1693,19 @@ Toggle:
 
 Users should be able to change:
 
-$
+$$
 R,\Delta,v_{\rm eff},D,
-$
+$$
 
 observer velocity,
 
-$
+$$
 v_{\rm obs},
-$
+$$
 
 and model family, then instantly see:
 
-$
+$$
 t_{\rm light},
 \quad
 t_{\rm candidate},
@@ -1721,7 +1721,7 @@ K_{\max},
 {\rm ANEC},
 \quad
 {\rm CTC}.
-$
+$$
 
 This would make an abstract GR problem visually understandable while preserving rigorous equations underneath.
 
@@ -1733,23 +1733,23 @@ But the research question is **not worthless**.
 
 It becomes scientifically interesting precisely when framed as a falsifiable search over the boundary between:
 
-$
+$$
 \text{nonlocal correlation},
-$
+$$
 
-$
+$$
 \text{apparent superluminality},
-$
+$$
 
-$
+$$
 \text{effective geometric shortcuts},
-$
+$$
 
 and
 
-$
+$$
 \text{actual controllable superluminal information}.
-$
+$$
 
 Warp-drive research remains active in 2026, including new classification, energy-condition and observational-signature work, but it remains theoretical rather than an experimentally demonstrated engineering technology. [archived citation: bibliography verification pending]
 
