@@ -1,5 +1,14 @@
 # Interstellar Link Lab
 
+## Receiver acquisition and detector recovery · 26 October 2026
+
+[**Interactive receiver-acquisition study**](https://biswajit1999.github.io/Interstellar-Link-Lab/receiver-acquisition.html) · [**Physics and experiment record**](docs/research/ACQUISITION_DEADTIME_RESEARCH_STAGE_2026.md)
+
+The current synthetic research step follows an **8-PPM / educational convolutional-FEC / CRC** packet through correlated pointing drift, pilot-based acquisition, a toy stellar continuum, non-paralyzable photon-counter dead time, time tagging and soft Viterbi decoding. Eight independent 100-frame runs per configuration yield **4.592, 3.264, 2.011 and 0.000 CRC-verified payload bits/s** across ideal, drifting, dead-time-impaired and deliberately severe test cases. The 0.000 severe case is a finite simulation result, not proof of zero channel capacity.
+
+**Source status:** The complete event-level Python code, 19 new passing tests, numerical JSON, two PNG plots, accessible offline HTML and the project poster have been packaged in a separate research release but are **not yet fully mirrored into this GitHub repository**. The note and web explainer are online. This stage provides no demonstration of faster-than-light communication.
+
+
 ## Latest research — pointing fades and whole-message reliability (26 October 2026)
 
 ![Simulated packet survival with correlated pointing fades (original raster PNG)](docs/images/pointing_fade_packet_survival_2026.png)
