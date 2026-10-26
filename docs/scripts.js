@@ -6,8 +6,8 @@
  const nice=(v,unit="")=>{if(!Number.isFinite(v))return "—";if(v>=1e6)return (v/1e6).toFixed(2)+"M"+unit;if(v>=1e3)return (v/1000).toFixed(2)+"k"+unit;if(v>=10)return v.toFixed(1)+unit;if(v>=1)return v.toFixed(2)+unit;if(v>=.001)return v.toPrecision(3)+unit;return v.toExponential(2)+unit};
  const inputs=["power","dtx","drx","distance","wavelength","efficiency","pointing","order","signal","background"];
  let last={};
- function get(id){return Number(byId(id)?.value||0)}
- function format(id,v){if(id==="wavelength")return v+" nm";if(id==="distance")return v.toFixed(2)+" ly";if(id==="efficiency")return Math.round(v*100)+"%";if(id==="pointing")return v.toFixed(2)+" μrad";if(id==="power")return v+" W";if(id==="signal")return v.toFixed(2)+" photons";if(id==="background")return v.toFixed(2)+" photons";if(id==="dtx"||id==="drx")return v.toFixed(1)+" m";return String(v)}
+ function get(id){const v=Number(byId(id)?.value||0);return id==="order"?Math.pow(2,v):v}
+ function format(id,v){if(id==="order")return String(Math.pow(2,v));if(id==="wavelength")return v+" nm";if(id==="distance")return v.toFixed(2)+" ly";if(id==="efficiency")return Math.round(v*100)+"%";if(id==="pointing")return v.toFixed(2)+" μrad";if(id==="power")return v+" W";if(id==="signal")return v.toFixed(2)+" photons";if(id==="background")return v.toFixed(2)+" photons";if(id==="dtx"||id==="drx")return v.toFixed(1)+" m";return String(v)}
  function simulateLink(){
   const p=get("power"),dt=get("dtx"),dr=get("drx"),dly=get("distance"),lam=get("wavelength")*1e-9,eta=get("efficiency"),sig=get("pointing")*1e-6;
   const R=dly*LY,z=Math.PI*dt*dr/(2*lam*R),capture=z*z/4-z**4/32;
