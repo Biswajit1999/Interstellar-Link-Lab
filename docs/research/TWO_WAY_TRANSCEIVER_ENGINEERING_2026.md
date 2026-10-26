@@ -62,28 +62,28 @@ A detector's bias/quench or cryogenic subsystem is **not** specified here. Its e
 Controller 3.3-V GPIO -> 330-ohm resistor -> visible LED -> ground. Across a short air gap, a phototransistor has its emitter at receiver ground and collector at a **sense node pulled up to 3.3 V by 10 kohm**. A suitable 3.3-V Schmitt input timestamps the node. Light pulls the node LOW; invert the bit decision.
 
 Approximate TX LED current for an assumed 2.0-V forward voltage:
-\[
+$
 I = \frac{3.3\,{\rm V}-2.0\,{\rm V}}{330\,\Omega} \simeq 3.9\,{\rm mA}.
-\]
+$
 This is a *concept*, not a validated circuit board. Confirm GPIO ratings, LED current, phototransistor pinout, rise/fall time, light levels, wiring and all component datasheets before construction. It is not a single-photon receiver.
 
 ## Quantitative photon budget: a physically constrained baseline
 
 For an unobscured circular transmitting pupil and a much smaller aperture at the receiver plane of its diffraction pattern, define
 
-\[
+$
 z=\frac{\pi D_tD_r}{2\lambda R},\qquad
 \eta_{\rm capture}\simeq \frac{z^2}{4},\qquad
 N_{\rm detected/s} \simeq \frac{P_t}{hc/\lambda}\,\eta_{\rm capture}\,\eta_{\rm system}.
-\]
+$
 
 This is an **ideal small-receiver, far-field** approximation, not a full telescope model. The [reproducible v0.6 source](../../research_tools/interstellar_optical_budget.py) uses a stable fourth-order correction. At 4.24 ly, 1064 nm, 10 W, $D_t=1$ m, $D_r=10$ m and 20% end-to-end efficiency, it predicts **0.363 detected photons/s** in this optimistic idealisation. Real acquisition, jitter, atmospheric and background losses are excluded.
 
 For uncoded M-slot PPM **at zero background**, if a pulse produces a Poisson mean $s$ and a tie is guessed uniformly when no photon is detected, the symbol error probability is exactly
 
-\[
+$
 P_{\rm SER}=(1-1/M)e^{-s}.
-\]
+$
 
 A coded radio/optical modem with timing uncertainty and background requires much more than this analytic lower-complexity control. The additional [regression tests](../../research_tools/tests/test_interstellar_optical_budget.py) check parameter rejection, aperture scaling, inverse-square distance, zero-background PPM and one-way/round-trip timing.
 
