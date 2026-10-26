@@ -23,7 +23,8 @@ def wilson_interval(success,n,z=1.959963984540054):
     p=success/n; z2=z*z; d=1+z2/n
     center=(p+z2/(2*n))/d
     half=z*sqrt((p*(1-p)+z2/(4*n))/n)/d
-    return (max(0,center-half),min(1,center+half))
+    return (0.0 if success==0 else max(0.,center-half),
+            1.0 if success==n else min(1.,center+half))
 
 @dataclass(frozen=True)
 class PPMCase:
