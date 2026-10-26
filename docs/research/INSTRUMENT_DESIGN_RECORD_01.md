@@ -105,7 +105,7 @@ A future instrument concept cannot begin by drawing a faster laser driver. It be
 
 State the spacetime manifold M, metric g, matter/source model T, observer tetrads, and physically allowed trajectory/field equations. Compute Einstein residuals and local/global causal sets under the **actual** metric, including time-order consistency and geodesic completeness or known singularities where relevant. Validate against Minkowski/Schwarzschild analytic benchmarks before any speculative case.
 
-If a message is selected at emission event A, the extraordinary criterion requires a locally readable B **outside J⁺(A)** for the physical theory being tested, with rigorous clock, intervention and leakage controls. Do not confuse travel shorter than a Minkowski comparison path with a message outside the candidate geometry's own null cone.
+Two *distinct* extraordinary objectives must be tested. **Shortcut transport:** a physically viable metric and source permit delivery faster than a rigorously defined external/reference null route, perhaps while remaining inside J⁺(A) of the actual metric. **Causal violation:** a freshly selected input X is locally readable at B **outside J⁺(A)** of the actual physical theory. Both require rigorous clocks, interventions, source dynamics and side-channel controls. Beating a Minkowski comparison ray must never be silently promoted into violation of the candidate geometry's own null cone.
 
 Known obstacles to warp/wormhole/corridor approaches include extreme source requirements, exotic-energy properties, stability, self-consistency, physical preparation time, chronology and quantum effects. These are research questions with uncertain answers, not deliverables promised by this repository.
 
