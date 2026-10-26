@@ -20,6 +20,10 @@ The answer currently has two distinct parts. **We can improve how many verified 
 
 The chain starts with new scientific data, produces error-detectable and error-corrected frames, assigns pulse times in a modulator, drives an optical terminal, propagates a diffracting beam, and reconstructs receiver data from photon time tags. Packet integrity determines whether a measurement can be called **fresh and recovered**, or must remain an explicit prediction.
 
+![Reference low-voltage optical electronics, original PNG](docs/images/bench_electronics.png)
+
+*Fig. 2 — Low-voltage transmitter/sensor/timestamping functional chain. This is a concept drawing, not an electrical schematic suitable for fabrication. Pin-level wiring and cautions appear in the [research report](docs/report.html#electronics).*
+
 The longer-term instrument is **bidirectional**. Both Earth and the remote terminal would need a transmitter, receiver, shared timing strategy, autonomous acquisition/pointing and power-management system. Even an immediate response traverses the same separation again.
 
 | Quantity | Illustrative reference | What it actually says |
