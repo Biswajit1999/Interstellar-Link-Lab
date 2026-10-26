@@ -1,5 +1,14 @@
 # Interstellar Link Lab
 
+## Latest research — pointing fades and whole-message reliability (26 October 2026)
+
+[**Explore the interactive, raster-canvas experiment**](https://biswajit1999.github.io/Interstellar-Link-Lab/pointing-study.html) · [**Read the derivation and primary literature**](docs/research/POINTING_FADES_VS_MEAN_PHOTONS_2026.md) · [**Run the Python model**](research_tools/pointing_fade.py) · [**Inspect independent tests**](research_tools/tests/test_pointing_fade.py)
+
+![Photon-efficient transmitter/receiver chain (original PNG)](docs/images/photon_signal_chain.png)
+
+A photon-starved link's **mean received power can drastically overestimate whole-message reliability** when the pointing error persists throughout a packet. A deliberately artificial Gaussian-optics, zero-background 8-PPM example with 1.0 µrad pointing jitter per axis gives approximately **30.5%** correct uncoded 16-symbol packets after accounting for packet-correlated pointing, against **99.2%** from an invalid mean-power-only shortcut. This is a numerical demonstration, not measured terminal performance or the earlier uniform-pupil Airy link model. The interactive page draws an ordinary raster chart with HTML Canvas (no SVG artwork).
+
+
 ![Interstellar Link Lab — original research banner](docs/images/interstellar_hero.png)
 
 **Photon-efficient deep-space communication, optical transceiver design, moving-endpoint relativity, and the search for physically viable communication paths beyond the ordinary light-cone benchmark.**
