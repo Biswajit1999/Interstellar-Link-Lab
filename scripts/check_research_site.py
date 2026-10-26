@@ -13,7 +13,8 @@ ROOT=Path(__file__).resolve().parents[1]
 PAGES=[ROOT/"docs/index.html",ROOT/"docs/report.html"]
 RASTERS=[ROOT/"docs/images/interstellar_hero.png",
          ROOT/"docs/images/photon_signal_chain.png",
-         ROOT/"docs/images/bench_electronics.png"]
+         ROOT/"docs/images/bench_electronics.png",
+         ROOT/"docs/images/physical_scaling.png"]
 
 class Reader(HTMLParser):
     def __init__(self):
@@ -58,4 +59,4 @@ if __name__=="__main__":
     problems=check()
     if problems:
         raise SystemExit("\n".join(problems))
-    print("Website: two pages, local links and three original PNGs verified.")
+    print("Website: two pages, local links and four original PNGs verified.")
