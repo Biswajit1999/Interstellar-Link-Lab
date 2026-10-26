@@ -29,6 +29,14 @@ The complete local v0.4 research package also contains a conventional five-page 
 
 ---
 
+## Read and test the quantum no-signalling example
+
+- [**Bell-state calculation with correctly rendered equations**](docs/research/QUANTUM_NO_SIGNALLING.md)
+- [**Interactive no-signalling experiment**](docs/no-signalling.html) — offline HTML with seeded Bell-pair sampling, receiver-only statistics and an ordinary side-channel positive control.
+- [**Reproducible Python source**](research_tools/quantum_no_signal_lab.py) and [regression tests](research_tools/tests/test_quantum_no_signal_lab.py).
+
+The original archival report's TeX delimiters have been repaired for GitHub's native MathJax. Old, unresolvable chat citations are flagged as unverified, not passed off as scholarly references. The active note cites primary publications.
+
 ## Research programme — 25 October 2026
 
 The original [*Beyond the Light Cone* research report](docs/research/ORIGINAL_BEYOND_THE_LIGHT_CONE.md) and [original scientific research brief](docs/research/ORIGINAL_RESEARCH_BRIEF.md) are preserved here as historical inputs, separate from the current verified-source research and working code. Earlier source-message citation tokens in those archived documents are **not validated bibliographic citations**.
