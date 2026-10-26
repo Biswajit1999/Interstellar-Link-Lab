@@ -4,6 +4,8 @@
 **Source:** 11-page *Interstellar Link Lab Research Report v0.2* prepared for this standalone repository.  
 **Status:** Extracted text for accessibility; PDF page layout, equations, tables, and images may not survive extraction. The full PDF remains part of the separate local release bundle. These are illustrative simulation results, not flight or FTL validation.
 
+> **Historical PDF text extraction.** This is kept for numerical provenance, not as the current typeset paper: formula layout and figure positions may be lost. Read the [correctly typeset no-signalling calculation](research/QUANTUM_NO_SIGNALLING.md) or the [interactive MathML experiment](no-signalling.html). A new four-page standalone research note is provided as a separate downloadable artifact.
+
 ---
 
 <PARSED TEXT FOR PAGE: 1 / 11>
@@ -14,7 +16,7 @@
  Research lead: Biswajit Jana | Repository target: Biswajit1999/interstellar-link-lab
 
 
- Executive summary
+ Research question and scope
  This release is a runnable laboratory for idealized deep-space optical communication, photon-counting PPM,
  predictive-image transport, relativity controls, and symbolic geometry baselines. It adds an independent analytical
  hard-decision PPM detector error model, numerical confidence intervals, and CRC-gated tiled image reconstruction. 60
@@ -172,7 +174,7 @@ Interstellar Link Lab | v0.2.0 simulated research                               
 
 
 
- Executive summary
+ Research question and scope
  The package integrates an ideal circular-aperture interstellar laser-link budget, direct
  photon-counting pulse-position modulation, predictive remote-image reconstruction, quantum
  no-signalling controls, Lorentz geometry and symbolic GR validation. All tests and figures can be
