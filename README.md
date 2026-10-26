@@ -6,7 +6,7 @@
 
 **Research lead:** Biswajit Jana · **Project state:** active computational research · **First public release:** October 2026
 
-[**Explore the interactive observatory**](docs/index.html) · [**Read the technical report as a website**](docs/report.html) · [**Run the Python experiments**](#reproduce-the-calculations) · [**Inspect the complete research question**](docs/research/ORIGINAL_BEYOND_THE_LIGHT_CONE.md)
+[**Explore the interactive observatory (GitHub Pages)**](https://biswajit1999.github.io/Interstellar-Link-Lab/) · [**Read the technical report as a website**](https://biswajit1999.github.io/Interstellar-Link-Lab/report.html) · [**Run the Python experiments**](#reproduce-the-calculations) · [**Inspect the complete research question**](docs/research/ORIGINAL_BEYOND_THE_LIGHT_CONE.md)
 
 > **The question:** If Earth sends a newly chosen message to a receiver near Proxima Centauri, can that receiver learn the message before an ordinary light ray would arrive—and, if not, how close can we get to the best communication system allowed by physics?
 
@@ -40,7 +40,7 @@ The nominal photon calculation uses an unobscured circular pupil and a small rec
 
 The static site operates without a server-side application. It includes an interactive optical-photon budget, a synthetic Poisson PPM experiment, research chapter navigation, and separate instrument and causal-physics explanations.
 
-**[Open the research interface](docs/index.html)** · **[Open the scientific report](docs/report.html)**
+**[Open the research interface](https://biswajit1999.github.io/Interstellar-Link-Lab/)** · **[Open the scientific report](https://biswajit1999.github.io/Interstellar-Link-Lab/report.html)**
 
 The controls are deterministic and the browser can export its parameter state and synthetic outputs as JSON. The site does **not** connect to an actual detector or spacecraft.
 
@@ -63,7 +63,7 @@ The hardware and communication focus is the number of **CRC-verified new informa
 
 The [Bell-state simulation](research_tools/quantum_no_signal_lab.py) tests receiver-only marginals when Alice changes measurement basis. Bob's unconditional local outcomes remain independent of Alice's newly chosen setting. A deliberate inserted classical leak is a positive control, **not** an entanglement channel.
 
-A genuine new information channel would require a fresh random input X and receiver-only record Y linked by an intervention at spacetime events outside the **actual metric's** allowed causal relation, with calibrated clocks, side-channel rejection, preregistered statistical tests and independent replication.
+Two scientific targets must be distinguished. A **spacetime shortcut** could, in principle, beat a *well-defined external reference light-time* while following null or timelike curves of its own physical metric, if that metric and its sources could actually exist. A stronger **causality-violating claim** requires a fresh randomized input X inferred at an event B outside the actual metric's future causal set J⁺(A). Neither is demonstrated. Both demand calibrated clocks, source dynamics, leakage audits and replication.
 
 ### Causal Corridor — test speculative spacetime physics
 
@@ -93,6 +93,8 @@ python -m research_tools.modulation
 | [quantum_no_signal_lab.py](research_tools/quantum_no_signal_lab.py) | Born-rule Bell statistics and deliberate classical-leak positive control | Ideal quantum simulation, no physical separated experiment |
 | [advanced/](research_tools/advanced/) | Soft PPM, convolutional FEC and frame experiments | Software demonstration; hardware verification outstanding |
 | [tests/](research_tools/tests/) | Regression controls | Automated source tests; check Actions for most recent result |
+
+The [active-optics pointing loop](research_tools/pointing_control.py) adds finite-bandwidth two-axis control, electronic sensor noise and an approximate optical pointing-overlap model.
 
 The browser code lives in [docs/index.html](docs/index.html), [docs/scripts.js](docs/scripts.js) and [docs/styles.css](docs/styles.css). PNG research assets are under [docs/images/](docs/images/).
 
