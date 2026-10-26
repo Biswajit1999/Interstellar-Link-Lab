@@ -1,5 +1,9 @@
 # Interstellar Link Lab
 
+## Two-way transmitter / receiver engineering — v0.6
+
+[**Read the full two-way transceiver research note**](docs/research/TWO_WAY_TRANSCEIVER_ENGINEERING_2026.md): Earth/Proxima round-trip propagation, an optical transmitter/receiver chain, reference 3.3-V LED–phototransistor circuit, detector/FPGA electrical interfaces, new interstellar photon-budget Python code and tests, and physically falsifiable rather than asserted FTL hypotheses. Full-resolution engineering SVGs and the 12-page PDF are in the independent v0.6 release download; binary assets are not yet fully on GitHub.
+
 ## Illustrated engineering field guide — 26 October 2026
 
 Start with [**From a new bit on Earth to a distant receiver**](docs/research/ILLUSTRATED_FIELD_GUIDE.md). The guide explains, in order, the light-time problem, optical modem, electronic control, a 3.3 V visible-LED timing circuit, photon-counting receiver, coding, image prediction, and the quantum no-signalling test. Four [editable SVG diagrams](docs/figures/) accompany the engineering explanation.
