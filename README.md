@@ -1,111 +1,129 @@
 # Interstellar Link Lab
 
-## Two-way transmitter / receiver engineering — v0.6
+![Interstellar Link Lab — original research banner](docs/images/interstellar_hero.png)
 
-[**Read the full two-way transceiver research note**](docs/research/TWO_WAY_TRANSCEIVER_ENGINEERING_2026.md): Earth/Proxima round-trip propagation, an optical transmitter/receiver chain, reference 3.3-V LED–phototransistor circuit, detector/FPGA electrical interfaces, new interstellar photon-budget Python code and tests, and physically falsifiable rather than asserted FTL hypotheses. Full-resolution engineering SVGs and the 12-page PDF are in the independent v0.6 release download; binary assets are not yet fully on GitHub.
+**Photon-efficient deep-space communication, optical transceiver design, moving-endpoint relativity, and the search for physically viable communication paths beyond the ordinary light-cone benchmark.**
 
-## Illustrated engineering field guide — 26 October 2026
+**Research lead:** Biswajit Jana · **Project state:** active computational research · **First public release:** October 2026
 
-Start with [**From a new bit on Earth to a distant receiver**](docs/research/ILLUSTRATED_FIELD_GUIDE.md). The guide explains, in order, the light-time problem, optical modem, electronic control, a 3.3 V visible-LED timing circuit, photon-counting receiver, coding, image prediction, and the quantum no-signalling test. Four [editable SVG diagrams](docs/figures/) accompany the engineering explanation.
+[**Explore the interactive observatory**](docs/index.html) · [**Read the technical report as a website**](docs/report.html) · [**Run the Python experiments**](#reproduce-the-calculations) · [**Inspect the complete research question**](docs/research/ORIGINAL_BEYOND_THE_LIGHT_CONE.md)
 
-**Status:** the illustrated circuits are conceptual references, not a validated PCB or built high-voltage detector. The companion 15-page PDF and binary rendered figures have been generated separately but are not yet stored as binaries in this GitHub repository. No FTL signal has been demonstrated.
+> **The question:** If Earth sends a newly chosen message to a receiver near Proxima Centauri, can that receiver learn the message before an ordinary light ray would arrive—and, if not, how close can we get to the best communication system allowed by physics?
 
+The answer currently has two distinct parts. **We can improve how many verified bits arrive per received photon.** We have no experimentally established means of making a *freshly chosen bit* propagate faster than light in vacuum. This project treats those statements separately and tests each model rather than claiming a discovery.
 
-**Photon-efficient interstellar communication · Deep-space optical links · Predictive imaging · Relativistic causality**
+## Start with the physical system
 
-**Research lead:** Biswajit Jana · **Stage:** scientific simulation prototype
+![Original raster transmitter / receiver architecture](docs/images/photon_signal_chain.png)
 
-Interstellar Link Lab is an end-to-end, reproducible research programme for:
+*Fig. 1 — Conceptual data-to-optics and photon-to-data architecture. Original PNG artwork, not a flight-qualified circuit or actual interstellar photograph.*
 
-- Photon-counting, single-photon-level optical communication and interstellar link budgets.
-- Pulse-position modulation (PPM), signal detection, packet integrity and eventually error-correcting codes.
-- Predictive image transmission, digital-twin residuals and reconstructed receiver imagery.
-- Moving Earth–Proxima Centauri endpoints and rigorous light-time accounting.
-- Classical and quantum no-signalling control experiments.
-- Exploratory numerical-relativity / spacetime hypotheses, **clearly segregated from validated engineering**.
+The chain starts with new scientific data, produces error-detectable and error-corrected frames, assigns pulse times in a modulator, drives an optical terminal, propagates a diffracting beam, and reconstructs receiver data from photon time tags. Packet integrity determines whether a measurement can be called **fresh and recovered**, or must remain an explicit prediction.
 
-## Photon Frontier: coded optical receiver, 25 October 2026
+The longer-term instrument is **bidirectional**. Both Earth and the remote terminal would need a transmitter, receiver, shared timing strategy, autonomous acquisition/pointing and power-management system. Even an immediate response traverses the same separation again.
 
-A new [research note](docs/research/PHOTON_FRONTIER_V04.md) describes a soft-count M-PPM modem with an illustrative constraint-length-3 convolutional code, Viterbi decoding and CRC-validated fresh messages. The [source](research_tools/advanced/) and [regression tests](research_tools/tests/test_advanced.py) are executable Python, not a claimed flight implementation. The [parameter-study script](scripts/run_optical_modem_study.py) reproduces a 24-condition Monte Carlo sweep. Conditions: 0.08 background photons/slot, 100 μs/slot and 60 independently seeded frames per parameter point.
+| Quantity | Illustrative reference | What it actually says |
+|---|---:|---|
+| Earth–Proxima static separation | 4.24 ly | A reference length, not a fitted 2026 ephemeris |
+| Earliest ordinary one-way propagation | ~4.24 years | Before payload size, coding or receiver integration time |
+| Earliest ordinary request and immediate reply | ~8.48 years | Before remote processing and clock uncertainty |
+| Ideal detected photon rate, example | ~0.363 s⁻¹ | *10 W; 1 m transmit; 10 m receive; 1064 nm; 20% efficiency; perfect acquisition* |
+| Physical faster-than-light transmitter | **Not demonstrated** | Warp/wormhole hypotheses do not supply a validated hardware design |
 
-At four detected signal photons per illuminated slot, **8-PPM accepted 58/60 frames** versus **44/60 for 16-PPM**. This is a variable pulse-photon experiment; average optical power is **not controlled** between configurations. The ideal 4.24-light-year geometric budget assumes a 1 kW transmitter, 10 m transmit aperture, 30 m receiver, 1550 nm light and 20% scalar throughput. It estimates approximately 22,411 detected photons/s **before detailed acquisition, pointing and detector losses**.
+The nominal photon calculation uses an unobscured circular pupil and a small receiver relative to the diffraction pattern; the extensive pointing and detector losses required for a mission-grade link are not included. **Do not treat the result as a realizable instrument performance figure.**
 
-- [Open the optical-link calculator](web/link-calculator.html) (offline HTML, editable parameters and explicit assumptions).
-- [View the optical transmitter/channel/receiver diagram](hardware/diagrams/optical_system.svg).
-- [View the 3.3 V optical timing reference circuit](hardware/diagrams/timing_loopback.svg), which is **not** SPAD electronics.
-- [Read the detector/electronics bench specification](hardware/OPTICAL_ARCHITECTURE.md).
-- [Read the manuscript and interface writing conventions](docs/WRITING_AND_DESIGN.md).
+## Explore the research as a website
 
-The complete local v0.4 research package also contains a conventional five-page PDF paper, high-resolution figures, a deeper static analysis viewer, and additional source/tests awaiting verification in this online repository. The presence of documents, simulations, or a plotted photon rate is **not** a demonstration of interstellar hardware, a CCSDS compliant waveform or faster-than-light signalling.
+The static site operates without a server-side application. It includes an interactive optical-photon budget, a synthetic Poisson PPM experiment, research chapter navigation, and separate instrument and causal-physics explanations.
 
----
+**[Open the research interface](docs/index.html)** · **[Open the scientific report](docs/report.html)**
 
-## Read and test the quantum no-signalling example
+The controls are deterministic and the browser can export its parameter state and synthetic outputs as JSON. The site does **not** connect to an actual detector or spacecraft.
 
-- [**Bell-state calculation with correctly rendered equations**](docs/research/QUANTUM_NO_SIGNALLING.md)
-- [**Interactive no-signalling experiment**](docs/no-signalling.html) — offline HTML with seeded Bell-pair sampling, receiver-only statistics and an ordinary side-channel positive control.
-- [**Reproducible Python source**](research_tools/quantum_no_signal_lab.py) and [regression tests](research_tools/tests/test_quantum_no_signal_lab.py).
+To publish as GitHub Pages, select **Settings → Pages → Deploy from branch → main → /docs**. This setting is controlled by the repository owner and is not presumed active.
 
-The original archival report's TeX delimiters have been repaired for GitHub's native MathJax. Old, unresolvable chat citations are flagged as unverified, not passed off as scholarly references. The active note cites primary publications.
+## Three linked research programmes
 
-## Research programme — 25 October 2026
+### Photon Frontier — build the best physical link
 
-The original [*Beyond the Light Cone* research report](docs/research/ORIGINAL_BEYOND_THE_LIGHT_CONE.md) and [original scientific research brief](docs/research/ORIGINAL_RESEARCH_BRIEF.md) are preserved here as historical inputs, separate from the current verified-source research and working code. Earlier source-message citation tokens in those archived documents are **not validated bibliographic citations**.
+The hardware and communication focus is the number of **CRC-verified new information bits** per photon, joule, second of active transmission and optical aperture investment.
 
-- [**Sourced scientific programme: optical engineering vs true causal FTL**](docs/research/RESEARCH_PROGRAM_2026.md)
-- [**Modulation results: photon-counting OOK and M-ary PPM**](docs/research/MODULATION_RESULTS.md) — [source code](research_tools/modulation.py), [regression tests](research_tools/tests/test_modulation.py), [trade-study plot](figures/modulation_trade_2026.svg)
-- [**Causal and speculative GR falsification protocol**](docs/research/CAUSAL_TEST_PROTOCOL.md) — [executable null/positive/side-channel controls](research_tools/causal_controls.py), [tests](research_tools/tests/test_causal.py)
-- [**2026 source verification and hypothesis audit**](docs/research/LITERATURE_AUDIT.md)
+- Photon-counting OOK and M-ary pulse-position modulation with exact or seeded Poisson detection controls.
+- Soft-decision PPM, convolutional FEC/Viterbi experiments and protected packet framing.
+- Pointing jitter, optical throughput, apertures, event timestamp noise and background counts.
+- Predictive image transmission: send information *not already present* at the receiver and expose unrecovered tiles as uncertain.
+- An experimentally grounded electronics path from a 3.3 V LED loopback to qualified single-photon detector modules.
+- Closed-loop beam steering, thermal metrology, acquisition and time synchronization as required instrument subsystems.
 
-### Current executable reference (standard-library only)
+### Causal Frontier — distinguish correlation from communication
 
-```bash
-python -m research_tools.modulation
-python -m research_tools.causal_controls
+The [Bell-state simulation](research_tools/quantum_no_signal_lab.py) tests receiver-only marginals when Alice changes measurement basis. Bob's unconditional local outcomes remain independent of Alice's newly chosen setting. A deliberate inserted classical leak is a positive control, **not** an entanglement channel.
+
+A genuine new information channel would require a fresh random input X and receiver-only record Y linked by an intervention at spacetime events outside the **actual metric's** allowed causal relation, with calibrated clocks, side-channel rejection, preregistered statistical tests and independent replication.
+
+### Causal Corridor — test speculative spacetime physics
+
+The original [Beyond the Light Cone report](docs/research/ORIGINAL_BEYOND_THE_LIGHT_CONE.md) and the [falsifiable causal protocol](docs/research/CAUSAL_TEST_PROTOCOL.md) provide a starting ledger for warp metrics, Krasnikov-type corridors, wormholes and Hyperwave. None is a demonstrated instrument.
+
+Every candidate requires a specified metric and physically defensible matter/source model, the Einstein tensor, the relevant energy and conservation checks, null/timelike curves, global chronology and a realistic preparation process. **Arriving early against a background metric is not proof of outrunning the light cone of the actual metric.**
+
+## Reproduce the calculations
+
+Python **3.11 or newer** is recommended for the standard-library reference programs.
+
+~~~bash
 python -m unittest discover -s research_tools/tests -v
-```
+python -m research_tools.interstellar_optical_budget
+python -m research_tools.relativistic_geometry
+python -m research_tools.photon_statistics
+python -m research_tools.quantum_no_signal_lab
+python -m research_tools.modulation
+~~~
 
-The reference code calculates uncoded M-PPM Poisson SER with random tie-breaking, optimized hard-threshold binary OOK information, peak-to-average pulse-intensity constraints and **light-time-preserving** ideal full-message timing. The reported mutual-information rates are *ideal hard-decision channel benchmarks*, not achieved reliable throughput. A GitHub Actions workflow runs the standalone reference tests.
+| Python source | Scientific role | Status |
+|---|---|---|
+| [interstellar_optical_budget.py](research_tools/interstellar_optical_budget.py) | Small-receiver far-field photon rate and static light time | Idealized analytic model |
+| [relativistic_geometry.py](research_tools/relativistic_geometry.py) | Inertial 3D moving-endpoint null intercept, round trip and point-ahead | Constant-velocity baseline; no real ephemeris |
+| [photon_statistics.py](research_tools/photon_statistics.py) | Synthetic photon-counted PPM under pointing jitter/background and Wilson uncertainty | Seeded Monte Carlo, toy detector |
+| [modulation.py](research_tools/modulation.py) | OOK/PPM uncoded information trade studies | Ideal statistics, not a CCSDS modem |
+| [quantum_no_signal_lab.py](research_tools/quantum_no_signal_lab.py) | Born-rule Bell statistics and deliberate classical-leak positive control | Ideal quantum simulation, no physical separated experiment |
+| [advanced/](research_tools/advanced/) | Soft PPM, convolutional FEC and frame experiments | Software demonstration; hardware verification outstanding |
+| [tests/](research_tools/tests/) | Regression controls | Automated source tests; check Actions for most recent result |
 
-**Scientific conclusion remains unchanged:** higher information throughput is demonstrably possible, but no verified channel carries freshly chosen information outside the actual physical future light cone. No FTL claim, proprietary device claim or CCSDS compliance claim is made.
+The browser code lives in [docs/index.html](docs/index.html), [docs/scripts.js](docs/scripts.js) and [docs/styles.css](docs/styles.css). PNG research assets are under [docs/images/](docs/images/).
 
-**Repository transfer status:** The v0.3 research notes and the standalone modulation reference source/tests are online. The earlier v0.2 viewer and report text are also online. The broader 97-file v0.2 source/reports/figure archive is **not yet fully uploaded**; standalone code here must not be represented as that full source archive.
+## Next-generation transceiver: the instrument-level questions
+
+A credible terminal needs separate data, timing, pointing and safety/control loops. The [two-way transceiver research note](docs/research/TWO_WAY_TRANSCEIVER_ENGINEERING_2026.md) specifies these chains, while the [illustrated field guide](docs/research/ILLUSTRATED_FIELD_GUIDE.md) explains the concepts in plain language.
+
+**Electronic demonstration:** 3.3 V GPIO → 330 Ω series resistor → visible LED → short enclosed optical gap → phototransistor with a 10 kΩ pull-up → compatible digital threshold/time stamp. This is a **reference teaching circuit**, not an approved PCB, and every electrical component and sensor interface must be checked before assembly.
+
+**Research terminal:** an independently interlocked optical transmitter, telescope and point-ahead mechanism, closed-loop pointing, spectral/temporal filtering, commercial qualified SPAD/SNSPD photon-counting modules, time-to-digital conversion, clock/synchronization recovery, and error-corrected packet verification. Neither the high-voltage detector electronics nor the optical power subsystem has been fabricated or qualified here.
+
+## What could make this work scientifically valuable decades from now?
+
+A useful long-lived research record is not just a futuristic visualization. It needs:
+
+1. **Physics that can be falsified:** explicit variables, units, coordinate choices, the actual metric and statistical decision rules.
+2. **Implementation that can be repeated:** source files, pinned dependencies where required, benchmark inputs, deterministic seeds and checksums.
+3. **Measured hardware:** schematics, PCB revisions, component specifications, calibrations, clock logs and raw photon time tags *when actual prototypes exist*.
+4. **Trade studies:** photons/bit, accepted frame errors, optical power and aperture, target motion, pointing and environmental margins.
+5. **Negative results:** failed spacetime hypotheses and unexplained effects preserved alongside successful tests, without renaming them as discoveries.
+6. **A maintained source trail:** primary publications, catalog versions, DOI links, observation epochs and honest attribution.
+
+**Research work packages:** optical end-to-end calibration → component-specific electronics and ECAD → measured photon-counted link → epoch-specific Earth/Proxima geometry → independent numerical-GR baseline → falsifiable candidate metric evaluation.
+
+## Literature and standards
+
+- [NASA/JPL — Deep Space Optical Communications](https://www.jpl.nasa.gov/missions/deep-space-optical-communications-dsoc/) — an optical data-transfer precedent, not FTL.
+- [CCSDS](https://ccsds.org/) — consult applicable optical coding, synchronization and physical-layer recommendations before claiming compliance.
+- [Bennett et al., *Phys. Rev. Lett.* **70**, 1895 (1993)](https://doi.org/10.1103/PhysRevLett.70.1895) — teleportation uses a classical channel.
+- [Everett and Roman, *Phys. Rev. D* **56**, 2100 (1997)](https://arxiv.org/abs/gr-qc/9702049) — theoretical Krasnikov geometry.
+- [Alcubierre and Lobo (2021)](https://arxiv.org/abs/2103.05610) — warp-drive spacetime review.
+- [Original research brief](docs/research/ORIGINAL_RESEARCH_BRIEF.md), [technical audit](docs/research/LITERATURE_AUDIT.md), and [original archived report](docs/research/ORIGINAL_BEYOND_THE_LIGHT_CONE.md). Historical citation placeholders are identified in the archive and are not independently verified sources.
 
 ---
 
-## Scientific viewer
+Research lead **Biswajit Jana** · Interstellar Link Lab · 2026. No external institute endorsement, flight qualification or experimentally confirmed faster-than-light channel is claimed.
 
-[**Open the complete offline v0.2 experiment viewer**](docs/index.html)  
-[**Read the eleven-page report as accessible text**](docs/RESEARCH_REPORT_v0.2_TEXT.md)
-
-The embedded viewer provides the v0.2 synthetic interstellar-link experiment, analytical PPM comparisons, photon-counting models, and illustrative reconstructed images. It is a **static display of already simulated data**, not an online telescope or operational spacecraft link.
-
-## Publication state
-
-**Standalone repository** — no Moving Observer submodules or dependency.
-
-The offline v0.2 viewer and an accessible text extraction of the 11-page research report have been uploaded through the repository's authenticated GitHub connection. **The full v0.2.0 source-code ZIP, numerical source, tests, plots and PDF have NOT yet been uploaded to this GitHub repository.** Their independent local release bundle is being transferred separately. Do not infer that this repository is complete because the viewer is present.
-
-The source archive was locally checked as a 60-test simulation baseline, but GitHub Actions has not yet independently rerun all those tests in this separate repository. The aim is to make the standalone repository reproducible and reviewable end-to-end.
-
-## Scientific safeguards
-
-- The nominal 4.24-light-year reference is an **illustrative static distance**, not an astrometric ephemeris.
-- The simulation uses highly idealized optical assumptions; it is **not** flight-qualified.
-- A predicted image is not information about a newly observed event until its residual bits physically arrive.
-- Neither entanglement-only messaging nor faster-than-light signalling has been demonstrated.
-- Novel speculative metric research requires stress-energy, energy-condition, causal and observational validity checks.
-
-## Programme architecture
-
-| Module | Focus |
-|---|---|
-| Photon Frontier | Deep-space optical links, photon statistics, PPM, channel coding, predictive images |
-| Causal Frontier | Light cones, Lorentz transformations, quantum no-signalling, statistical controls |
-| Causal Corridor | Established GR baselines and separately labelled speculative metrics |
-
-## Next engineering milestones
-
-Publish complete v0.2.0 source and binary research assets; validate independently in CI; add Gaia-epoch astrometric data and uncertainty; stellar noise and detector effects; CCSDS-inspired coding with sourced implementation tests; physical pointing and acquisition; independent relativity verification.
-
-© 2026 Biswajit Jana. No institution or external partnership is implied.
+**Why the project exists:** to push credible interstellar communications engineering as far as demonstrable physics allows, while preserving a mathematically explicit and independently testable route for extraordinary hypotheses.
