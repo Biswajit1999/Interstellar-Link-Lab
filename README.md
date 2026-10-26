@@ -2,6 +2,10 @@
 
 ## Latest research — pointing fades and whole-message reliability (26 October 2026)
 
+![Simulated packet survival with correlated pointing fades (original raster PNG)](docs/images/pointing_fade_packet_survival_2026.png)
+
+*Computed from the idealized 2026 pointing-fade model; this is not measured detector data.*
+
 [**Explore the interactive, raster-canvas experiment**](https://biswajit1999.github.io/Interstellar-Link-Lab/pointing-study.html) · [**Read the derivation and primary literature**](docs/research/POINTING_FADES_VS_MEAN_PHOTONS_2026.md) · [**Run the Python model**](research_tools/pointing_fade.py) · [**Inspect independent tests**](research_tools/tests/test_pointing_fade.py)
 
 ![Photon-efficient transmitter/receiver chain (original PNG)](docs/images/photon_signal_chain.png)
