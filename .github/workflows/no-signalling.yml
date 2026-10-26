@@ -1,0 +1,28 @@
+name: No-signalling quantum controls
+on:
+  push:
+    paths:
+      - research_tools/quantum_no_signal_lab.py
+      - research_tools/tests/test_quantum_no_signal_lab.py
+      - .github/workflows/no-signalling.yml
+  pull_request:
+    paths:
+      - research_tools/quantum_no_signal_lab.py
+      - research_tools/tests/test_quantum_no_signal_lab.py
+      - .github/workflows/no-signalling.yml
+
+jobs:
+  bell-null-controls:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run Bell-state and side-channel regression tests
+        run: python -m unittest discover -s research_tools/tests -p 'test_quantum_no_signal_lab.py' -v
+      - name: Record seeded default experiment
+        run: python -m research_tools.quantum_no_signal_lab --pairs 12000 --seed 20261025
