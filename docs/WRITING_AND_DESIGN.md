@@ -15,3 +15,14 @@ References supplied by the researcher:
 - [21st.dev](https://21st.dev/)
 
 No code, instrument or experimental result may be called flight-qualified without independent validation.
+## Equation and reference rendering checks
+
+- In GitHub Markdown, use dollar-delimited inline mathematics and double-dollar block mathematics. GitHub renders these with MathJax. Do not leave raw escaped bracket expressions in reader-facing reports.
+- In browser HTML pages, use native MathML or a self-contained checked renderer; offline pages must still display equations.
+- Strip unresolvable chat citation tokens from reader-facing editions. Preserve archival provenance and say clearly which sources await verification; do not invent replacement citations.
+- Every numerical interactive control must change a real reproducible calculation or explicitly inspect a frozen dataset. Mark idealised conditions and timing; no imitation 'live telemetry' where none exists.
+- Test default browser layout with JavaScript disabled, at mobile width, and with reduced-motion settings. Avoid hiding primary text behind animation until a script runs.
+
+Design references supplied for exploration: [Motion](https://motion.dev/), [Framer motion](https://www.framer.com/dictionary/framer-motion), [motion components](https://www.framer.com/community/marketplace/components/tags/motion/), [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill), [21st.dev](https://21st.dev/). These are visual references, not dependencies or permission to copy protected components.
+
+[Wikipedia's Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) is an editorial prompt to avoid generic phrasing, not a detector of who wrote a passage. Maintain transparent scientific attribution and factual provenance.
