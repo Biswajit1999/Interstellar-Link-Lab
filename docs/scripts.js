@@ -76,5 +76,5 @@
  const onScroll=()=>{if(!bar)return;const d=document.documentElement;bar.style.width=(100*window.scrollY/Math.max(1,d.scrollHeight-window.innerHeight)).toFixed(1)+"%"};
  window.addEventListener("scroll",onScroll,{passive:true});
  window.addEventListener("resize",()=>{if(last.ppm)plot(last.ppm)},{passive:true});
- refresh();onScroll();
+ if(byId("power") && byId("slotChart")) refresh();onScroll();
 })();
