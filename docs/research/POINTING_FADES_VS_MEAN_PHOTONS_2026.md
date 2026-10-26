@@ -70,6 +70,10 @@ To expose burst losses, the calculation deliberately uses **100 seconds per unco
 
 The difference is substantial but sensitive to the specific toy packet, timing and background assumptions. It should not be quoted as an operational receiver prediction.
 
+![Calculated packet survival versus pointing jitter, original PNG](../images/pointing_fade_packet_survival_2026.png)
+
+*The solid curve integrates the packet-wide pointing distribution. The contrasting curve substitutes a mean photon rate and is not a correct packet-fading model.*
+
 ## Reproducing and attempting to falsify the calculation
 
 [Run the standalone Python source](../../research_tools/pointing_fade.py) and [20 independent regression controls](../../research_tools/tests/test_pointing_fade.py):
