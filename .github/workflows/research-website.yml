@@ -1,0 +1,23 @@
+name: Research website integrity
+on:
+  push:
+    paths:
+      - "docs/**"
+      - "README.md"
+      - "scripts/check_research_site.py"
+      - ".github/workflows/research-website.yml"
+  pull_request:
+    paths:
+      - "docs/**"
+      - "README.md"
+      - "scripts/check_research_site.py"
+      - ".github/workflows/research-website.yml"
+jobs:
+  website-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate links, original raster PNGs and local assets
+        run: python3 scripts/check_research_site.py
+      - name: Check interactive JavaScript parses
+        run: node --check docs/scripts.js
