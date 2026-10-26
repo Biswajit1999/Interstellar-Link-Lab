@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pointing fades and packet survival · Interstellar Link Lab</title>
+<meta name="description" content="A reproducible model for photon-starved interstellar optics, packet-correlated pointing jitter and raw PPM reliability.">
+<style>
+:root{color-scheme:dark;--bg:#07101b;--surface:#112235;--line:#2a455a;--text:#e5f0f5;--sub:#a9bdca;--accent:#75dddb;--orange:#ffc175}
+*{box-sizing:border-box}body{font-family:system-ui,Segoe UI,sans-serif;background:var(--bg);color:var(--text);margin:0;line-height:1.65}
+a{color:var(--accent)}.wrap{max-width:1160px;margin:auto;padding:28px 22px 75px}
+.nav{display:flex;flex-wrap:wrap;align-items:center;gap:22px;font-size:14px;margin-bottom:54px}.logo{font-weight:700;letter-spacing:.07em;margin-right:auto}
+.tag{font-size:12px;text-transform:uppercase;letter-spacing:.2em;color:var(--accent)}
+h1{font-size:clamp(38px,6vw,75px);line-height:1.1;font-weight:700;letter-spacing:-.045em;max-width:930px;margin:16px 0}
+h2{font-size:28px;margin:30px 0 12px}p{max-width:850px;color:var(--sub)}
+.hero{background:linear-gradient(120deg,#112b40,#08101a 65%);border:1px solid var(--line);border-radius:24px;padding:40px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:250px;height:250px;border:1px solid #75dddb33;border-radius:50%;right:-110px;top:-90px;box-shadow:0 0 0 55px #75dddb0b,0 0 0 110px #75dddb06;pointer-events:none}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;margin:20px 0}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.metric{background:#0b1b2a;border:1px solid #264255;border-radius:13px;padding:16px}
+.metric .n{font-size:31px;font-variant-numeric:tabular-nums;font-weight:650;letter-spacing:-.04em}.metric .unit{color:var(--sub);font-size:12px}
+label{display:block;font-size:15px;font-weight:700}input[type=range]{width:100%;accent-color:var(--accent);margin:24px 0 8px}
+.chart{width:100%;height:390px;display:block;background:#0b1b2a;border:1px solid var(--line);border-radius:12px}
+.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:var(--sub)}
+.pip{display:inline-block;width:16px;height:3px;margin-right:8px;vertical-align:middle;background:var(--accent)}.pip.orange{background:var(--orange)}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{border-bottom:1px solid var(--line);padding:12px;text-align:left}td{font-variant-numeric:tabular-nums}th{color:var(--sub)}
+code{padding:3px 6px;background:#263749;border-radius:4px}button{padding:11px 17px;border-radius:10px;border:1px solid var(--accent);background:transparent;color:var(--text);cursor:pointer}button:hover{background:#1b3b49}button:focus-visible,input:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.eq{background:#0a1c2a;border-left:2px solid var(--accent);padding:20px;border-radius:6px;color:#d2eaf1;font-family:ui-monospace,monospace;overflow-x:auto;font-size:14px}
+.note{padding:16px 20px;border-left:3px solid var(--orange);background:#332719aa;color:#eee0cc}
+.footer{border-top:1px solid var(--line);margin-top:70px;padding-top:20px;color:var(--sub);font-size:13px}
+@media(max-width:700px){.cols{grid-template-columns:1fr}.hero{padding:23px}.chart{height:270px}.wrap{padding:18px 14px 50px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
+</head><body><main class="wrap">
+<nav class="nav" aria-label="Research navigation"><a href="index.html" class="logo">INTERSTELLAR LINK LAB</a><a href="report.html">Report</a><a href="https://github.com/Biswajit1999/Interstellar-Link-Lab/blob/main/research_tools/pointing_fade.py">Python source</a><a href="research/POINTING_FADES_VS_MEAN_PHOTONS_2026.md">Derivation</a></nav>
+<section class="hero"><div class="tag">Photon Frontier · Research experiment 07 · October 2026</div>
+<h1>Sometimes the photons arrive. The message doesn't.</h1>
+<p>The direction of a laser beam can drift during a packet. When that happens, average signal power can tell a very misleading story about how often the entire packet survives.</p>
+<p>This model tests a Gaussian laser mode over 4.24 light-years with 8-PPM and ideal photon-count detection. Change the pointing jitter and watch the whole-message reliability.</p>
+</section>
+<section class="card">
+<h2>Explore the pointing error</h2>
+<label for="sigma">Angular pointing jitter per axis: <output id="sigmaValue">1.00</output> microradian</label>
+<input id="sigma" type="range" min="0" max="2" step="0.05" value="1" aria-describedby="settings"/>
+<p id="settings">10 W optical power · 0.5 m Gaussian waist · 5 m receiver radius · 1064 nm · 20% throughput · 100 s per symbol · 16 uncoded symbols · zero background.</p>
+<div class="cols" role="status" aria-live="polite">
+  <div class="metric"><div class="unit">Mean detected signal</div><div class="n" id="photons">0.0747</div><div class="unit">photons per second</div></div>
+  <div class="metric"><div class="unit">Real packet-averaged success</div><div class="n" id="trueprob">30.5%</div><div class="unit">correlated packet pointing</div></div>
+  <div class="metric"><div class="unit">Incorrect average-power shortcut</div><div class="n" id="falseprob">99.2%</div><div class="unit">overconfident in this case</div></div>
+</div>
+<canvas id="curve" class="chart" aria-label="Raster-drawn graph comparing correlated pointing packet success with the average-power shortcut from zero to two microradians" role="img"></canvas>
+<div class="legend"><span><i class="pip"></i>Packet-correlated pointing</span><span><i class="pip orange"></i>Mean-power shortcut</span></div>
+<p>This display recomputes the formulas in JavaScript; the independently tested Python implementation is authoritative. No external libraries or network requests are used by the calculation.</p>
+<button id="export" type="button">Export study table as CSV</button>
+</section>
+<section class="card"><h2>Why the two curves disagree</h2>
+<p>Imagine taking an entire photograph while the telescope is slightly mispointed. Some packets are transmitted in good alignment, but others experience a continuous period of severe light loss. Replacing that variation with one average photon rate disguises the missing packets.</p>
+<div class="eq">Mean gain = 1 / (1 + 4 × (range × jitter / beam radius)²)</div>
+<div class="eq">Whole packet success = average over pointing [ (1 − (1−1/M) × exp(−s₀ × gain))ⁿ ]</div>
+<p>Every plotted probability refers to all 16 raw PPM symbols being correct. There is no forward error correction, beacon acquisition, physical frame synchronisation, detector dead time or background model in this calculation.</p>
+<div class="note"><strong>Different beam models.</strong> This example uses a Gaussian TEM00 mode. The earlier 0.363-photons/s example used a uniformly illuminated circular aperture (Airy pattern). Those are not the same transmitter pupil, so their baseline rates are not directly interchangeable.</div>
+</section>
+<section class="card"><h2>What the electronics team should measure next</h2>
+<table><thead><tr><th>Instrument output</th><th>Needed for</th></tr></thead><tbody>
+<tr><td>Tip–tilt position and timestamps</td><td>Real pointing power spectral density, saturation and burst durations</td></tr>
+<tr><td>Photon-event time tags</td><td>Actual detector noise, lost pulses and signal statistics</td></tr>
+<tr><td>Beacon acquisition history</td><td>Period without link; false lock; recapture time</td></tr>
+<tr><td>FPGA frame/CRC telemetry</td><td>Verified new bits, erasure rate and decoding latency</td></tr>
+<tr><td>Clock-reference record</td><td>Slot synchronization, drift and timing uncertainty</td></tr>
+</tbody></table>
+<p>Next connect these measurements to the existing soft-decision PPM and FEC code, replacing the ideal independent detector model with realistic memory and pointing traces. See <a href="research/INSTRUMENT_DESIGN_RECORD_01.md">instrument design record</a> and <a href="research/POINTING_FADES_VS_MEAN_PHOTONS_2026.md">equations and source references</a>.</p>
+</section>
+<footer class="footer">Research lead: Biswajit Jana · This is an idealised simulation, not a physical interstellar terminal or evidence of faster-than-light messaging. The 4.24-year one-way and approximately 8.48-year round-trip light-time boundaries remain unchanged.</footer>
+</main>
+<script>
+"use strict";
+const dist=4.24*9.4607304725808e15,lam=1.064e-6,w0=.5,rx=5,pow=10,eta=.2,h=6.62607015e-34,c=299792458;
+const zr=Math.PI*w0*w0/lam, w=w0*Math.sqrt(1+(dist/zr)**2);
+const s0=pow*lam/(h*c)*2*(rx/w)**2*eta*100;
+function shape(sig){return sig===0?Infinity:(w/(2*dist*sig*1e-6))**2}
+function gain(sig){const t=dist*sig*1e-6/w;return 1/(1+4*t*t)}
+function success(s){return Math.pow(1-.875*Math.exp(-s),16)}
+function curved(sig,steps=256){const k=shape(sig);if(!Number.isFinite(k))return success(s0);let sum=success(0)+success(s0);for(let i=1;i<steps;i++){let g=Math.pow(i/steps,1/k);sum+=(i%2?4:2)*success(s0*g)}return sum/(3*steps)}
+function calc(sig){const t=dist*sig*1e-6;const frac=-Math.expm1(-2*rx*rx/(w*w+4*t*t));const photons=pow*lam/(h*c)*frac*eta;return {sig,photons,actual:curved(sig),mean:success(s0*gain(sig))}}
+const canvas=document.querySelector("#curve"),slider=document.querySelector("#sigma");
+let all=[];
+function plot(){
+ const ratio=window.devicePixelRatio||1, width=canvas.clientWidth,height=canvas.clientHeight;
+ canvas.width=Math.max(1,Math.round(width*ratio));canvas.height=Math.max(1,Math.round(height*ratio));
+ const ctx=canvas.getContext("2d");ctx.scale(ratio,ratio);
+ const L=64,R=width-18,T=19,B=height-44;
+ ctx.clearRect(0,0,width,height);ctx.lineWidth=1;ctx.font="12px system-ui";ctx.fillStyle="#a9bdca";
+ for(let j=0;j<=4;j++){let y=B-(B-T)*j/4;ctx.strokeStyle="#2a455a";ctx.beginPath();ctx.moveTo(L,y);ctx.lineTo(R,y);ctx.stroke();ctx.fillText((j*25)+"%",12,y+4)}
+ for(let j=0;j<=4;j++){let x=L+(R-L)*j/4;ctx.fillText((j/2).toFixed(1),x-10,B+18)}
+ ctx.fillText("Pointing jitter per axis (µrad)",L+8,height-8);
+ const X=v=>L+(R-L)*v/2,Y=v=>B-(B-T)*v;
+ for(const [key,col] of [["actual","#75dddb"],["mean","#ffc175"]]){
+   ctx.strokeStyle=col;ctx.lineWidth=2.8;ctx.beginPath();
+   all.forEach((p,i)=>i?ctx.lineTo(X(p.sig),Y(p[key])):ctx.moveTo(X(p.sig),Y(p[key])));
+   ctx.stroke();
+ }
+ const sel=calc(Number(slider.value));
+ ctx.strokeStyle="#748899";ctx.setLineDash([4,5]);ctx.beginPath();ctx.moveTo(X(sel.sig),T);ctx.lineTo(X(sel.sig),B);ctx.stroke();ctx.setLineDash([]);
+ for(const [key,col] of [["actual","#75dddb"],["mean","#ffc175"]]){ctx.beginPath();ctx.fillStyle=col;ctx.arc(X(sel.sig),Y(sel[key]),5,0,Math.PI*2);ctx.fill();}
+ document.querySelector("#sigmaValue").textContent=sel.sig.toFixed(2);
+ document.querySelector("#photons").textContent=sel.photons.toPrecision(3);
+ document.querySelector("#trueprob").textContent=(100*sel.actual).toFixed(1)+"%";
+ document.querySelector("#falseprob").textContent=(100*sel.mean).toFixed(1)+"%";
+}
+function update(){all=Array.from({length:81},(_,i)=>calc(i/40));plot()}
+slider.addEventListener("input",plot);window.addEventListener("resize",plot);
+document.querySelector("#export").addEventListener("click",()=>{
+ const head="jitter_microrad_per_axis,mean_detected_photons_per_s,proper_packet_success,incorrect_mean_only_success\n";
+ const rows=all.map(p=>[p.sig,p.photons,p.actual,p.mean].join(",")).join("\n");
+ const blob=new Blob([head+rows],{type:"text/csv"}),url=URL.createObjectURL(blob),a=document.createElement("a");
+ a.href=url;a.download="interstellar-pointing-fade-study.csv";a.click();URL.revokeObjectURL(url);
+});
+update();
+</script></body></html>
