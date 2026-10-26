@@ -71,6 +71,10 @@ The original [Beyond the Light Cone report](docs/research/ORIGINAL_BEYOND_THE_LI
 
 Every candidate requires a specified metric and physically defensible matter/source model, the Einstein tensor, the relevant energy and conservation checks, null/timelike curves, global chronology and a realistic preparation process. **Arriving early against a background metric is not proof of outrunning the light cone of the actual metric.**
 
+![Idealized photon capture and ordinary two-way delay versus distance](docs/images/physical_scaling.png)
+
+*Fig. 3 — Original raster numerical tradeoff figure. The left panel uses the explicitly idealised optical baseline, scaling as inverse distance squared; the right panel shows the ordinary two-way vacuum light-time benchmark. Neither curve represents a demonstrated FTL channel.*
+
 ## Reproduce the calculations
 
 Python **3.11 or newer** is recommended for the standard-library reference programs.
