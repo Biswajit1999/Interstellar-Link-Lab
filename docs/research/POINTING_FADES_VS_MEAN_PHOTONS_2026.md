@@ -10,49 +10,49 @@ This is a reproducible numerical control and analytical model, not a measured sp
 
 ## Optical field and pointing model
 
-The transmitter is an ideal, untruncated TEM00 *Gaussian mode*, with 1/e² intensity waist radius \(w_0\). This is **not the same optical pupil** as the repository's separate uniform-circular-aperture/Airy calculation. At wavelength \(\lambda\), propagation distance \(R\) and Rayleigh range \(z_R=\pi w_0^2/\lambda\), the intensity radius is
+The transmitter is an ideal, untruncated TEM00 *Gaussian mode*, with 1/e² intensity waist radius $w_0$. This is **not the same optical pupil** as the repository's separate uniform-circular-aperture/Airy calculation. At wavelength $\lambda$, propagation distance $R$ and Rayleigh range $z_R=\pi w_0^2/\lambda$, the intensity radius is
 
-\[
+$
 w(R)=w_0\sqrt{1+(R/z_R)^2},\qquad
 \theta_{\rm divergence}=\frac{\lambda}{\pi w_0}.
-\]
+$
 
-The receiving circular aperture has radius \(a\ll w(R)\). Two orthogonal angular pointing errors are independent normal variables, each with standard deviation \(\sigma_\theta\). The offset of the beam axis at the receiver is \(\mathbf{r}=R\boldsymbol{\theta}\). In the small-aperture limit, instantaneous intensity gain is
+The receiving circular aperture has radius $a\ll w(R)$. Two orthogonal angular pointing errors are independent normal variables, each with standard deviation $\sigma_\theta$. The offset of the beam axis at the receiver is $\mathbf{r}=R\boldsymbol{\theta}$. In the small-aperture limit, instantaneous intensity gain is
 
-\[
+$
 G=\exp[-2|\mathbf r|^2/w(R)^2],\qquad
 \mathbb{E}[G]=\frac{1}{1+4(R\sigma_\theta/w(R))^2}.
-\]
+$
 
 The *exact mean* aperture fraction for the convolution of a circular Gaussian beam with centered 2-D Gaussian pointing error is
 
-\[
+$
 \overline{\eta}_{\mathrm{cap}} =
 1-\exp\left[-\frac{2a^2}{w(R)^2+4(R\sigma_\theta)^2}\right].
-\]
+$
 
-The averaged detected photon rate is \( \overline{\dot N} =
-[P\lambda/(hc)]\,\eta_{\rm system}\,\overline{\eta}_{\rm cap}\).
+The averaged detected photon rate is $ \overline{\dot N} =
+[P\lambda/(hc)]\,\eta_{\rm system}\,\overline{\eta}_{\rm cap}$.
 
 These expressions **exclude** optical truncation, spacecraft dynamics, systematic mispointing, wavefront error, pointing-acquisition losses, detector noise, stellar background and weather. The Gaussian waist parameter is not an aperture diameter. The source and its receiver must be qualified separately.
 
 ## A message is not an average of its symbols
 
-In ideal zero-background M-slot PPM with a mean \(s\) signal photons in the pulse slot, the exact uncoded hard-decision symbol error probability, with uniform random tie-breaking on empty frames, is
+In ideal zero-background M-slot PPM with a mean $s$ signal photons in the pulse slot, the exact uncoded hard-decision symbol error probability, with uniform random tie-breaking on empty frames, is
 
-\[
+$
 P_{\rm SER}(s)=(1-1/M)e^{-s}.
-\]
+$
 
-The probability that all \(n\) *uncoded* symbols are correct in a packet, conditional on one constant pointing gain \(G\), is
+The probability that all $n$ *uncoded* symbols are correct in a packet, conditional on one constant pointing gain $G$, is
 
-\[
+$
 P_{\rm packet}(G)=[1-(1-1/M)\exp(-s_0G)]^n.
-\]
+$
 
-The correct pointing-averaged probability is \( \mathbb E[P_{\rm packet}(G)]\). The common shortcut \(P_{\rm packet}(\mathbb E[G])\) is generally **not equal** to it. Our code uses deterministic Simpson quadrature over the analytically derived gain distribution and checks it against a seeded, independent random sampling estimate.
+The correct pointing-averaged probability is $ \mathbb E[P_{\rm packet}(G)]$. The common shortcut $P_{\rm packet}(\mathbb E[G])$ is generally **not equal** to it. Our code uses deterministic Simpson quadrature over the analytically derived gain distribution and checks it against a seeded, independent random sampling estimate.
 
-At strictly **zero** background and perfect synchronization, the complete photon-count channel conveys ideal mutual information \(I(X;Y)=[1-e^{-s}]\log_2 M\) bits per uniformly chosen PPM symbol. This is an **information-theoretic** number, not reliably delivered coded goodput or spacecraft performance.
+At strictly **zero** background and perfect synchronization, the complete photon-count channel conveys ideal mutual information $I(X;Y)=[1-e^{-s}]\log_2 M$ bits per uniformly chosen PPM symbol. This is an **information-theoretic** number, not reliably delivered coded goodput or spacecraft performance.
 
 ## Controlled numerical case
 
