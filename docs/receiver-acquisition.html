@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Interstellar Link Lab: acquisition, photon backgrounds, detector recovery and verified optical PPM packets.">
+<title>Receiver Acquisition — Interstellar Link Lab</title>
+<style>
+:root{color-scheme:dark;--bg:#081527;--panel:#10263a;--ink:#f3f8fa;--muted:#bad0db;--cyan:#66cad1;--gold:#f5b274}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink)}
+header,main,footer{max-width:1150px;margin:auto;padding:24px}header{display:flex;gap:22px;justify-content:space-between;flex-wrap:wrap;border-bottom:1px solid #315064}a{color:var(--cyan)}
+header a{text-decoration:none}h1{font-size:clamp(35px,6vw,67px);letter-spacing:-.05em;line-height:1.1;max-width:860px;margin:18px 0}h2{margin-top:44px;font-size:clamp(24px,4vw,38px)}
+.lead{font-size:20px;max-width:940px;color:var(--muted)}.tag{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--cyan)}
+.hero{width:100%;border-radius:14px;margin:12px 0 22px;max-height:340px;object-fit:cover;object-position:center}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:32px 0}.card,.panel{background:var(--panel);border:1px solid #315064;border-radius:13px;padding:21px}
+.card strong{display:block;font-size:33px}.card span{color:var(--muted);font-size:14px}p,li{color:var(--muted)}
+button{font:inherit;color:var(--ink);background:#173850;border:1px solid #42677a;border-radius:8px;padding:10px 17px;cursor:pointer}
+button[aria-pressed=true]{border-color:var(--cyan);background:#075c66}button:focus-visible{outline:3px solid var(--gold)}
+.buttons{display:flex;gap:11px;flex-wrap:wrap;margin:14px 0 25px}.row{display:grid;grid-template-columns:200px 1fr 100px;gap:12px;align-items:center;margin:14px 0}
+.track{height:20px;border-radius:5px;overflow:hidden;background:#204058}.bar{height:100%;background:var(--cyan);transition:width .45s}
+.notice{padding:18px 22px;border-left:3px solid var(--gold);background:#282333;margin:25px 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.grid>div{padding:14px;border:1px solid #315064;border-radius:10px}
+footer{border-top:1px solid #315064;color:var(--muted);font-size:13px}
+@media(max-width:700px){.cards,.grid{grid-template-columns:1fr}.row{grid-template-columns:1fr;gap:5px}}
+@media(prefers-reduced-motion:reduce){.bar{transition:none}}
+</style></head><body>
+<header><a href="./index.html">← Interstellar Link Lab</a><a href="./report.html">Research report</a><a href="https://github.com/Biswajit1999/Interstellar-Link-Lab">Source repository ↗</a></header>
+<main><p class="tag">Research notebook / 26 October 2026 / Biswajit Jana</p><h1>The receiver must stay locked long enough to read the message</h1>
+<p class="lead">The laser is only one part of a deep-space link. We test how angular drift, acquisition pauses, stellar continuum noise, detector dead time and soft decoding combine to determine whether a fresh frame passes its CRC.</p>
+<img class="hero" src="./images/interstellar_hero.png" alt="Concept artwork of an optical observatory transmitting toward a distant star; illustrative, not a photograph of a completed link.">
+<div class="notice"><b>Synthetic engineering, not an FTL demonstration.</b> The signal photons, pointing trajectories and detector timestamps are simulated. The 4.24-light-year static benchmark still implies about 4.24 years to receive the first bit and about 8.48 years to receive an immediate reply.</div>
+<div class="cards"><section class="card"><strong>4.59 bit/s</strong><span>Ideal channel benchmark</span></section><section class="card"><strong>3.26 bit/s</strong><span>Drift, acquisition and stellar proxy</span></section><section class="card"><strong>2.01 bit/s</strong><span>Adding 16 ms dead time</span></section></div>
+<h2>What the simulated optical terminal does</h2>
+<div class="grid"><div><h3>Transmit</h3><p>CRC packet → educational (7,5) convolutional encoder → 8-PPM mapper → Gaussian pointing-fade proxy → synthetic photon arrivals.</p></div><div><h3>Receive</h3><p>Pilot lock controller → non-paralyzable photon counter → timestamp jitter → soft Poisson demapper → Viterbi decoder → CRC-valid packet.</p></div></div>
+<h2>Four controlled scenarios</h2><section class="panel"><p>Choose a fixed, replicated output. These controls inspect modelled results, not live detector readings.</p><div class="buttons" id="buttons"></div><h3 id="name"></h3><p id="details"></p><div class="row"><span>Verified goodput</span><div class="track"><div class="bar" id="g"></div></div><span id="gv"></span></div><div class="row"><span>Time with lock</span><div class="track"><div class="bar" id="a"></div></div><span id="av"></span></div><div class="row"><span>CRC frames / scheduled</span><div class="track"><div class="bar" id="s"></div></div><span id="sv"></span></div><p id="warning"></p></section>
+<h2>What the next test must answer</h2><p>Can a receiver that explicitly tracks the detector's recovery state and a measured pointing estimate recover more CRC-valid information than the deliberately mismatched Poisson receiver? The required comparison needs real detector dead-time distributions, afterpulsing, actual star spectra, link acquisition transients and calibration of the optical pointing PSD.</p>
+<p>Full equations, numerical assumptions, independent-seed results and literature: <a href="./research/ACQUISITION_DEADTIME_RESEARCH_STAGE_2026.md">Read the research note</a>. The complete source-code release and PNG figures are distributed separately while their GitHub import is pending.</p>
+</main><footer>Interstellar Link Lab · Research lead Biswajit Jana · No faster-than-light information transfer demonstrated</footer>
+<script>
+const cases=[
+{name:'Ideal pointing and detector',d:'No background, no pointing error and no detector dead time.',g:4.591954,a:1,s:.99875,w:'An intentionally optimistic verification control.'},
+{name:'Correlated drift + stellar continuum',d:'0.35 µrad axis jitter, 8-frame correlation, two pilot frames for acquisition and 0.03484 expected background photons per 20-ms slot.',g:3.264368,a:.78625,s:.7100,w:'The continuum source is an assumed blackbody with unmeasured spatial coupling.'},
+{name:'Same link plus detector dead time',d:'The same pointing and background, with 16 ms non-paralyzable detector recovery.',g:2.011494,a:.78625,s:.4375,w:'The receiver uses a deliberately mismatched independent-Poisson likelihood.'},
+{name:'Severe stress test',d:'0.55 µrad pointing jitter, fivefold background and 25 ms dead time.',g:0,a:.37125,s:0,w:'No packets passed CRC in this finite study. This is not an impossibility theorem.'}
+];
+const bs=document.querySelector('#buttons');cases.forEach((x,i)=>{const b=document.createElement('button');b.textContent=['Ideal','Pointing + star','Dead time','Severe stress'][i];b.onclick=()=>show(i);bs.append(b)});
+function show(i){const x=cases[i];Array.from(bs.children).forEach((b,j)=>b.setAttribute('aria-pressed',i===j));document.querySelector('#name').textContent=x.name;document.querySelector('#details').textContent=x.d;for(const [key,val,max,label] of [['g',x.g,4.6,x.g.toFixed(2)+' bit/s'],['a',x.a,1,(x.a*100).toFixed(1)+'%'],['s',x.s,1,(x.s*100).toFixed(1)+'%']]){document.getElementById(key).style.width=100*val/max+'%';document.getElementById(key+'v').textContent=label}document.getElementById('warning').textContent=x.w}show(1);
+</script></body></html>
