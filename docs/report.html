@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#060b15"><meta name="description" content="The mathematical and electronic design record for an end-to-end photon-efficient interstellar optical transceiver and a separate programme for testing causal physics."><title>Research record | Interstellar Link Lab</title><link rel="stylesheet" href="styles.css"><script defer src="scripts.js"></script></head>
+<body><div class="progress-track"><div class="progress-bar" id="progress"></div></div>
+<header class="site-bar"><a class="brand" href="index.html"><span class="brand-mark">✶</span>INTERSTELLAR LINK LAB<small>Methods and scientific record</small></a><nav class="site-nav" aria-label="Research pages"><a href="index.html">Observatory</a><a href="#physics">Physics</a><a href="#electronics">Electronics</a><a href="#validation">Validation</a><a href="https://github.com/Biswajit1999/Interstellar-Link-Lab">Source</a></nav></header>
+<main>
+<section class="hero" style="min-height:520px;background-position:center 45%"><div class="hero-inner"><p class="eyebrow">Research note 07 · 26 October 2026 · Biswajit Jana</p><h1 style="font-size:clamp(3rem,6vw,6.1rem)">A link across <em>light-years</em>.</h1><p class="hero-description">Physical models, instrument control, photon statistics, unresolved assumptions and experiments that could invalidate the design. A technical record, not a claim of superluminal communication.</p><div class="buttons"><a class="btn primary" href="#physics">Read the physical model</a><a class="btn ghost" href="index.html#lab">Open live simulations</a></div></div></section>
+<section class="section inner" id="physics"><p class="eyebrow">01 / Distance and causality</p><h2>A message must cross a physical path.</h2>
+<div class="grid two"><div class="panel"><h3>Emission is an event, not an animation frame</h3><p>Define emission A as the instant a new randomized bit becomes physically available at the transmitter. Define reception B as the instant its value becomes locally decodable at the distant terminal. The ordinary Minkowski causal interval is</p>
+<div class="equation">Δs² = −c² Δt² + Δx² + Δy² + Δz².</div>
+<p>Our sign convention is (−,+,+,+). A spacelike separation has Δs² &gt; 0 and cannot be connected by ordinary null or timelike future-directed signals. A coordinate speed or a faster processing algorithm is not evidence of a spacelike signal.</p></div>
+<div class="panel"><h3>Two moving endpoints</h3><p>In an inertial coordinate system, let Earth follow x<sub>E</sub>(t)=E₀+v<sub>E</sub>t and the distant terminal follow x<sub>B</sub>(t)=B₀+v<sub>B</sub>t. The one-way null intercept τ satisfies:</p>
+<div class="equation">|B(t₀+τ) − E(t₀)|² = c² τ².</div>
+<p>After a reply-generation delay τ<sub>p</sub>, solve a second null intercept from the then-current remote location to the then-current Earth worldline. The resulting round trip is <strong>not</strong> generally twice an instantaneous distance divided by c. The static illustrative 4.24-light-year baseline nevertheless yields about 8.48 years for an immediate reply.</p>
+<p><a class="readmore" href="https://github.com/Biswajit1999/Interstellar-Link-Lab/blob/main/research_tools/relativistic_geometry.py">Inertial 3D implementation, point-ahead and uncertainty sampling</a></p></div></div>
+<div class="panel" style="margin-top:18px"><p class="index">Scope and precision</p><p>Constant-velocity worldlines are a validation baseline, not a frozen astronomical ephemeris. This code does not yet solve light propagation in a curved Solar/Galactic metric, fit Gaia astrometric covariance, model acceleration or calibrate clock transfer. Those omissions must be closed before issuing a physical Earth–Proxima pointing prescription.</p></div>
+</section>
+<section class="section inner line-top" id="modem"><p class="eyebrow">02 / Optical channel and modulation</p><h2>Convert joules into detected information.</h2>
+<figure><img class="full-image" src="images/photon_signal_chain.png" loading="lazy" alt="Raster systems diagram from data frame to optical telescope and receiver" width="1120" height="500"><figcaption class="figure-note">Fig. 2 — Signal chain, with independent data, electrical, optical and clock subsystems.</figcaption></figure>
+<div class="grid two" style="margin-top:25px"><article class="panel"><h3>Small-receiver diffraction benchmark</h3>
+<p>For an unobstructed circular transmitter, a receiver much smaller than the far-field diffraction spot, a monochromatic carrier and ideal acquisition, the approximate captured power fraction is</p>
+<div class="equation">z = π D<sub>t</sub> D<sub>r</sub> / (2 λ R),<br>η<sub>capture</sub> ≈ z²/4 − z⁴/32.</div>
+<p>The mean detected photon rate is</p>
+<div class="equation">Ṅ ≈ (P<sub>t</sub> λ / hc) · η<sub>capture</sub> · η<sub>system</sub>.</div>
+<p>These equations do not include telescope obscuration, imperfect wavefronts, thermal stability, optical spectral losses, pointing acquisition or detector dead time. In the live site, pointing jitter uses a <strong>separate Gaussian-equivalent approximation</strong> and must not be mistaken for an exact jitter-averaged Airy integral.</p>
+<p><a class="readmore" href="https://github.com/Biswajit1999/Interstellar-Link-Lab/blob/main/research_tools/interstellar_optical_budget.py">Source and regression tests</a></p></article>
+<article class="panel"><h3>Photon statistics determine symbol decisions</h3>
+<p>With M-ary pulse-position modulation, one of M intervals contains the intended signal pulse. In an independent Poisson model, the selected slot follows Poisson(s+b) and each other slot follows Poisson(b). For b&gt;0, the ideal hard-decision maximum-likelihood detector selects the largest observed count.</p>
+<div class="equation">N<sub>on</sub> ~ Poisson(s+b)<br>N<sub>off</sub> ~ Poisson(b)</div>
+<p>If background is exactly zero, the symbol error probability with random guessing after a no-photon event is</p>
+<div class="equation">P<sub>SER</sub> = (1 − 1/M) exp(−s).</div>
+<p>This is an <em>uncoded</em> symbol error rate—not bit error rate or delivered frame throughput. The Python programme also includes seeded count simulation, 95% Wilson intervals, a simple two-axis pointing-jitter model and separate soft-decision/FEC experiments.</p>
+<p><a class="readmore" href="https://github.com/Biswajit1999/Interstellar-Link-Lab/blob/main/research_tools/photon_statistics.py">Reproduce the stochastic model</a></p></article></div>
+<div class="panel" style="margin-top:18px"><h3>Where the modulation research goes next</h3><p>A deployable link requires spectral stellar background estimates, detector quantum efficiency, clock recovery, acquisition, point-ahead errors, bandwidth, finite peak optical power, blocking/guard slots, CCSDS-consistent synchronization, soft information and a measured coded frame-error curve. No modulation family is assumed globally optimal; compare goodput per joule and accepted new bits per received photon across real operating conditions.</p></div>
+</section>
+<section class="section inner section-alt" id="electronics"><p class="eyebrow">03 / Electronics: proposed engineering interfaces</p><h2>A transmitter and receiver are systems, not boxes.</h2>
+<div class="grid two"><article class="panel"><h3>Transmitter digital and optical chain</h3>
+<div class="signal-chain"><div class="step"><b>CPU</b><small>Frame + CRC</small></div><span class="chevron">›</span><div class="step"><b>FPGA</b><small>Slot timing + FEC</small></div><span class="chevron">›</span><div class="step"><b>Driver</b><small>Pulse-energy control</small></div><span class="chevron">›</span><div class="step"><b>Optics</b><small>Beam launch</small></div></div>
+<p>Laser module choice must be constrained by pulse width, optical average/peak power, repetition rate, optical bandwidth, heat and aging. A hardware safety interlock, watchdog and independent disable path must exist outside the user data pipeline. The pointing sensor, motor/fast steering mirror, actuator drivers and optical fiducials form a second feedback loop.</p>
+<p>No laser driver circuitry should be treated as manufactured or electrically qualified based only on this block diagram.</p></article>
+<article class="panel"><h3>Receiver optical and timing chain</h3>
+<div class="signal-chain"><div class="step"><b>Optics</b><small>Pupil + filter</small></div><span class="chevron">›</span><div class="step"><b>Detector</b><small>SPAD / SNSPD</small></div><span class="chevron">›</span><div class="step"><b>TDC</b><small>Event tagging</small></div><span class="chevron">›</span><div class="step"><b>FPGA</b><small>Soft decoder</small></div></div>
+<p>The detector module's output polarity, electrical swing, timestamp granularity, dead-time distribution, dark-rate and cable propagation must be calibrated. SNSPD cryogenics and SPAD high-voltage bias/quench electronics are specialized subsystems and are deliberately excluded from the basic educational circuit.</p><p>Only packets passing the selected end-to-end integrity test count as recovered fresh information.</p></article></div>
+<div class="panel" style="margin-top:22px">
+ <h3>Low-voltage teaching experiment: optoelectronic loopback</h3>
+ <p>Digital 3.3 V output → 330 Ω series resistor → visible LED → ground. Across a short enclosed air gap, place a phototransistor with emitter to receiver ground. Pull its collector/sense node up to 3.3 V with 10 kΩ and pass the signal into a compatible Schmitt-trigger input. Light should pull the sense node toward LOW; verify actual logic polarity and response delay.</p>
+ <div class="equation">I<sub>LED</sub> ≈ (3.3 − 2.0) V / 330 Ω ≈ 3.9 mA</div>
+ <p>This current assumes a 2.0 V forward drop; select components using actual manufacturer ratings. **Do not** connect high-voltage avalanche circuitry or a high-power laser to this reference setup.</p>
+ <div class="table-scroll"><table><thead><tr><th>Signal / test point</th><th>Nominal interface</th><th>Required observation</th></tr></thead><tbody>
+ <tr><td>TP1 — FPGA / MCU drive</td><td>3.3 V logic</td><td>Output pulse width, jitter, drive current</td></tr>
+ <tr><td>TP2 — LED series path</td><td>330 Ω nominal</td><td>Forward current, pulse shape, temperature</td></tr>
+ <tr><td>TP3 — phototransistor collector</td><td>10 kΩ pull-up, 3.3 V</td><td>Light-dependent edge latency and slew</td></tr>
+ <tr><td>TP4 — digital receiver</td><td>3.3 V-compatible input</td><td>Threshold crossings, timestamp jitter, BER</td></tr>
+ <tr><td>TP5 — common reference</td><td>Ground and timing reference</td><td>Ground loops, timing drift, noise susceptibility</td></tr>
+ </tbody></table></div></div>
+</section>
+<section class="section inner" id="causality"><p class="eyebrow">04 / Quantum control</p><h2>Correlated photons are not a remote keyboard.</h2>
+<div class="grid two"><div class="panel"><h3>A Bell pair gives the wrong kind of knowledge</h3><p>For the Bell state |Φ⁺⟩ = (|00⟩ + |11⟩)/√2, the receiver's reduced state is one-half the identity. Alice can choose a measurement basis, but Bob's unread local probabilities do not reveal that choice.</p>
+<div class="equation">ρ<sub>B</sub> = Tr<sub>A</sub>(|Φ⁺⟩⟨Φ⁺|) = I/2<br>P(B=0 | Alice chooses X) = 1/2<br>P(B=0 | Alice chooses Z) = 1/2</div>
+<p>Two observers discover the joint pattern only after bringing their records together. Quantum teleportation has a classical communication requirement. A seeded Python null control and deliberate ordinary-leak positive control are available in the repo.</p>
+<a class="readmore" href="research/QUANTUM_NO_SIGNALLING.md">See full derivation and experiment</a></div>
+<div class="panel"><h3>What could invalidate a no-signalling conclusion?</h3><p>Unsynchronized time windows, post-selection, nonrandom or predictable bit choice, detector drift, a common source, hidden classical leakage or a wrongly specified causal separation can all create apparent associations. A statistically significant mutual information estimate is not proof of causal signalling.</p><p>For a genuine novel channel the relevant statistic must be measured from receiver-only data recorded before any allowed classical channel could bring the fresh message, with time-correlated null surrogates and independent replication.</p></div></div></section>
+<section class="section inner section-alt" id="geometry"><p class="eyebrow">05 / Speculative gravitation, isolated from the hardware baseline</p><h2>A spacetime shortcut needs a physical spacetime.</h2>
+<div class="panel"><p>Suppose a proposed metric g<sub>μν</sub> appears to connect events faster than a reference flat-space photon. That does <strong>not</strong> prove a signal outside the actual metric's light cone. The null structure, stress-energy and global causal relationships must be computed for the candidate geometry itself.</p>
+<div class="equation">ds² = g<sub>μν</sub> dx<sup>μ</sup> dx<sup>ν</sup><br>G<sub>μν</sub> + Λg<sub>μν</sub> = (8πG/c⁴) T<sub>μν</sub><br>g<sub>μν</sub> k<sup>μ</sup>k<sup>ν</sup> = 0  (null rays)</div>
+<p>Physical scrutiny includes conservation ∇<sub>μ</sub>T<sup>μν</sup>=0, observer-dependent energy density, null/weak energy conditions where relevant, matter source dynamics, stability, chronology, and whether a usable corridor can be established in finite time. Some conditions are theory-specific; do not assume that a failure or success of one energy condition establishes the whole physical argument.</p>
+<p>The Alcubierre warp geometry, Krasnikov-type metric, traversable wormhole and Hyperwave proposal occupy a theoretical hypothesis ledger. They are <em>not</em> advanced stages of the LED or photon-counting electronics. This repo has no working instrument that creates such a metric.</p></div>
+</section>
+<section class="section inner" id="validation"><p class="eyebrow">06 / Validation requirements</p><h2>What an instrument builder would need next.</h2>
+<div class="table-scroll"><table><thead><tr><th>Experiment</th><th>Data to save</th><th>What must be reproducible</th></tr></thead><tbody>
+<tr><td>Timing loopback</td><td>Logic-analyser edges, clock configuration, temperature</td><td>Jitter distributions and BER as a function of pulse width</td></tr>
+<tr><td>Visible optical loopback</td><td>Oscilloscope voltage/time records, light levels</td><td>Detector threshold, ambient rejection and pulse timing</td></tr>
+<tr><td>Qualified photon-counter test</td><td>Time-tag stream, dark/background counts, detector datasheet</td><td>Poisson/dead-time agreement, saturation, confidence intervals</td></tr>
+<tr><td>Soft PPM + FEC</td><td>Seeded messages, coded bits, slot counts and packet CRC</td><td>Symbol, bit and frame error rates versus signal photons</td></tr>
+<tr><td>Moving endpoint fit</td><td>Catalog ID, epoch, position/velocity covariance</td><td>Arrival-time and pointing-error propagation with units</td></tr>
+<tr><td>Candidate GR metric</td><td>Metric, inverse, Christoffels, Einstein tensor, matter model</td><td>Tensor identities, energy tests, geodesics and global causal analysis</td></tr>
+</tbody></table></div>
+<div class="grid two" style="margin-top:20px"><div class="panel"><h3>Versioned computational record</h3><p>Source Python, tests and seeded results belong in the public repository. The browser experiment can export its exact displayed parameter state and synthetic output as JSON. New physical data should include checksums, units, observation epochs, calibration lineage and data-use permission.</p><a class="readmore" href="https://github.com/Biswajit1999/Interstellar-Link-Lab/tree/main/research_tools">Open scientific programs</a></div><div class="panel warm"><h3>What has not been achieved</h3><p>We have not built a space-qualified laser terminal, commissioned a single-photon receiver, frozen an astrometric Earth–Proxima solution, demonstrated measured end-to-end performance, or discovered controllable faster-than-light information transfer. This report is a foundation for those research questions.</p></div></div>
+</section>
+<section class="section inner section-alt sources" id="references"><p class="eyebrow">07 / Literature and precedents</p><h2>References and archived hypotheses</h2><ol>
+<li><a href="https://www.jpl.nasa.gov/missions/deep-space-optical-communications-dsoc/">NASA/JPL — Deep Space Optical Communications</a>. Laboratory and space-to-ground optical communication precedent.</li>
+<li><a href="https://ccsds.org/">CCSDS — optical physical layer and coding/synchronization standards</a>. Refer to the actual applicable revisions when implementing compliant hardware.</li>
+<li><a href="https://doi.org/10.1103/PhysRevLett.70.1895">Bennett et al., Physical Review Letters 70, 1895 (1993)</a>. Teleportation via quantum and classical channels.</li>
+<li><a href="https://arxiv.org/abs/gr-qc/9702049">Everett &amp; Roman (1997)</a>. Krasnikov-type spacetime and exotic-matter considerations.</li>
+<li><a href="https://arxiv.org/abs/2103.05610">Alcubierre &amp; Lobo (2021)</a>. Review of warp-drive spacetime physics.</li>
+<li><a href="research/ORIGINAL_BEYOND_THE_LIGHT_CONE.md">Historical: Beyond the Light Cone research report</a>. Preserve archived speculation with explicit unverified-reference markers.</li>
+</ol></section>
+</main>
+<footer class="footer"><span>INTERSTELLAR LINK LAB · Biswajit Jana</span><span>Research methods · 26 October 2026</span><a href="index.html">← Back to the observatory</a></footer>
+</body></html>
