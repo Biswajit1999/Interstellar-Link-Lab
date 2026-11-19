@@ -159,3 +159,15 @@ A useful long-lived research record is not just a futuristic visualization. It n
 Research lead **Biswajit Jana** · Interstellar Link Lab · 2026. No external institute endorsement, flight qualification or experimentally confirmed faster-than-light channel is claimed.
 
 **Why the project exists:** to push credible interstellar communications engineering as far as demonstrable physics allows, while preserving a mathematically explicit and independently testable route for extraordinary hypotheses.
+
+## Research evidence and downloads
+
+- [Browse the evidence file index](evidence/manifest.json) or open `evidence.html` from the checkout to inspect previews and downloads.
+- [View Modulation trade 2026](figures/modulation_trade_2026.svg).
+
+Run these commands from the repository root to rebuild the published evidence.
+
+```sh
+python scripts/evidence_catalog.py
+python scripts/render_evidence_page.py
+```
