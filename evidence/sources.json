@@ -1,0 +1,31 @@
+{
+  "project": "Interstellar Link Lab",
+  "repository": "https://github.com/Biswajit1999/Interstellar-Link-Lab",
+  "files": [
+    {
+      "label": "Modulation trade 2026",
+      "path": "figures/modulation_trade_2026.svg",
+      "role": "Figures"
+    },
+    {
+      "label": "Bench optical loopback",
+      "path": "docs/figures/bench_optical_loopback.svg",
+      "role": "Figures"
+    },
+    {
+      "label": "End to end signal chain",
+      "path": "docs/figures/end_to_end_signal_chain.svg",
+      "role": "Figures"
+    },
+    {
+      "label": "Entanglement receiver marginal",
+      "path": "docs/figures/entanglement_receiver_marginal.svg",
+      "role": "Figures"
+    },
+    {
+      "label": "Mission lighttime",
+      "path": "docs/figures/mission_lighttime.svg",
+      "role": "Figures"
+    }
+  ]
+}

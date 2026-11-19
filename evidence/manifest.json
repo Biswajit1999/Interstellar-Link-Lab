@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "project": "Interstellar Link Lab",
+  "repository": "https://github.com/Biswajit1999/Interstellar-Link-Lab",
+  "files": [
+    {
+      "label": "Modulation trade 2026",
+      "path": "figures/modulation_trade_2026.svg",
+      "role": "Figures",
+      "bytes": 7403,
+      "sha256": "92418f1449fea405114d405eafff57c9324e04d4f9231715051d483434147b62",
+      "hash_basis": "LF-normalised text",
+      "format": "SVG"
+    },
+    {
+      "label": "Bench optical loopback",
+      "path": "docs/figures/bench_optical_loopback.svg",
+      "role": "Figures",
+      "bytes": 3194,
+      "sha256": "e7c8a88f06035e5190d2b61f6b3cc8aff4db3ab06c8648e1f6b779a12367b338",
+      "hash_basis": "LF-normalised text",
+      "format": "SVG"
+    },
+    {
+      "label": "End to end signal chain",
+      "path": "docs/figures/end_to_end_signal_chain.svg",
+      "role": "Figures",
+      "bytes": 5473,
+      "sha256": "004493ce0ab34d9d3acf798710c54cf3477b42e82db0c4b227e0f2d8f2514073",
+      "hash_basis": "LF-normalised text",
+      "format": "SVG"
+    },
+    {
+      "label": "Entanglement receiver marginal",
+      "path": "docs/figures/entanglement_receiver_marginal.svg",
+      "role": "Figures",
+      "bytes": 2496,
+      "sha256": "0adcc053ff94e4ec3bfa927c11d5095666ede11d836edb19e074a1277ca23a8d",
+      "hash_basis": "LF-normalised text",
+      "format": "SVG"
+    },
+    {
+      "label": "Mission lighttime",
+      "path": "docs/figures/mission_lighttime.svg",
+      "role": "Figures",
+      "bytes": 1896,
+      "sha256": "ed7d51812a1b48083a17f1b29debd2da741443cc9c5ee41567e5b055d2aaf024",
+      "hash_basis": "LF-normalised text",
+      "format": "SVG"
+    }
+  ]
+}
